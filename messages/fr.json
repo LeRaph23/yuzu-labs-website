@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "Yuzu Labs - Application de Fitness et Bien-être",
-    "description": "Yuzu est votre coach bien-être personnel. Étirements, soulagement des douleurs, objectif grand écart et exercices anti-stress."
+    "description": "Yuzu est ton coach bien-être personnel. Étirements, soulagement des douleurs, objectif grand écart et exercices anti-stress."
   },
   "header": {
     "features": "Fonctionnalités",
@@ -11,22 +11,22 @@
   },
   "hero": {
     "badge": "Bientôt disponible",
-    "title": "Yuzu, votre coach",
+    "title": "Yuzu, ton coach",
     "titleHighlight": "bien-être",
-    "subtitle": "Étirements guidés, soulagement des douleurs et exercices anti-stress. Atteignez vos objectifs de flexibilité avec votre compagnon citron préféré.",
+    "subtitle": "Étirements guidés, soulagement des douleurs et exercices anti-stress. Atteins tes objectifs de flexibilité avec ton compagnon citron préféré.",
     "cta": "Découvrir l'app",
     "ctaSecondary": "En savoir plus"
   },
   "features": {
-    "title": "Tout ce dont vous avez besoin",
-    "subtitle": "Des fonctionnalités pensées pour votre bien-être quotidien",
+    "title": "Tout ce dont tu as besoin",
+    "subtitle": "Des fonctionnalités pensées pour ton bien-être quotidien",
     "painRelief": {
       "title": "Soulagement des douleurs",
       "description": "Des exercices ciblés pour soulager les tensions du dos, de la nuque et des articulations."
     },
     "stretching": {
       "title": "Programmes d'étirements",
-      "description": "Des séances structurées pour améliorer votre souplesse au quotidien."
+      "description": "Des séances structurées pour améliorer ta souplesse au quotidien."
     },
     "splits": {
       "title": "Objectif Grand Écart",
@@ -34,21 +34,21 @@
     },
     "antiStress": {
       "title": "Exercices Anti-Stress",
-      "description": "Des techniques de respiration et de relaxation pour apaiser votre esprit."
+      "description": "Des techniques de respiration et de relaxation pour apaiser ton esprit."
     },
     "progress": {
       "title": "Suivi de Progression",
-      "description": "Visualisez vos progrès et restez motivé grâce à des statistiques détaillées."
+      "description": "Visualise tes progrès et reste motivé grâce à des statistiques détaillées."
     },
     "personalized": {
       "title": "Programmes Personnalisés",
-      "description": "Des recommandations adaptées à votre niveau et vos objectifs."
+      "description": "Des recommandations adaptées à ton niveau et tes objectifs."
     }
   },
   "mascot": {
-    "title": "Rencontrez Yuzu",
-    "subtitle": "Votre compagnon bien-être",
-    "description": "Yuzu est un petit citron plein d'énergie qui vous accompagne dans tous vos exercices. Toujours encourageant, jamais acide !",
+    "title": "Rencontre Yuzu",
+    "subtitle": "Ton compagnon bien-être",
+    "description": "Yuzu est un petit citron plein d'énergie qui t'accompagne dans tous tes exercices. Toujours encourageant, jamais acide !",
     "bubble1": "Tu vas y arriver !",
     "bubble2": "Encore un petit effort !",
     "bubble3": "Bravo, c'est super !"
@@ -73,18 +73,18 @@
     }
   },
   "contact": {
-    "title": "Contactez-nous",
-    "subtitle": "Une question ? N'hésitez pas à nous écrire",
-    "name": "Votre nom",
-    "email": "Votre email",
-    "message": "Votre message",
+    "title": "Contacte-nous",
+    "subtitle": "Une question ? N'hésite pas à nous écrire",
+    "name": "Ton nom",
+    "email": "Ton email",
+    "message": "Ton message",
     "send": "Envoyer",
     "success": "Message envoyé avec succès !",
-    "error": "Une erreur est survenue. Veuillez réessayer.",
-    "emailDirect": "Ou écrivez-nous directement à"
+    "error": "Une erreur est survenue. Réessaie plus tard.",
+    "emailDirect": "Ou écris-nous directement à"
   },
   "footer": {
-    "description": "Yuzu Labs développe des applications de bien-être innovantes pour améliorer votre qualité de vie au quotidien.",
+    "description": "Yuzu Labs développe des applications de bien-être innovantes pour améliorer ta qualité de vie au quotidien.",
     "legal": "Mentions légales",
     "privacy": "Politique de confidentialité",
     "terms": "Conditions d'utilisation",
@@ -116,35 +116,35 @@
   },
   "privacy": {
     "title": "Politique de confidentialité",
-    "intro": "Yuzu Labs s'engage à protéger la vie privée des utilisateurs de son application et de son site web. Cette politique de confidentialité explique comment nous collectons, utilisons et protégeons vos données personnelles.",
+    "intro": "Yuzu Labs s'engage à protéger la vie privée des utilisateurs de son application et de son site web. Cette politique de confidentialité explique comment nous collectons, utilisons et protégeons tes données personnelles.",
     "collection": {
       "title": "Données collectées",
       "content": "Nous collectons les données suivantes : informations de compte (email, nom), données d'utilisation de l'application, préférences utilisateur, et données de progression des exercices."
     },
     "usage": {
       "title": "Utilisation des données",
-      "content": "Vos données sont utilisées pour : personnaliser votre expérience, améliorer nos services, vous envoyer des notifications relatives à votre progression, et assurer le support client."
+      "content": "Tes données sont utilisées pour : personnaliser ton expérience, améliorer nos services, t'envoyer des notifications relatives à ta progression, et assurer le support client."
     },
     "cookies": {
       "title": "Cookies",
-      "content": "Notre site utilise des cookies essentiels au fonctionnement du service et des cookies analytiques pour améliorer l'expérience utilisateur. Vous pouvez désactiver les cookies dans les paramètres de votre navigateur."
+      "content": "Notre site utilise des cookies essentiels au fonctionnement du service et des cookies analytiques pour améliorer l'expérience utilisateur. Tu peux désactiver les cookies dans les paramètres de ton navigateur."
     },
     "rights": {
-      "title": "Vos droits (RGPD)",
-      "content": "Conformément au RGPD, vous disposez d'un droit d'accès, de rectification, de suppression et de portabilité de vos données. Pour exercer ces droits, contactez-nous à yuzu.contactme@gmail.com."
+      "title": "Tes droits (RGPD)",
+      "content": "Conformément au RGPD, tu disposes d'un droit d'accès, de rectification, de suppression et de portabilité de tes données. Pour exercer ces droits, contacte-nous à yuzu.contactme@gmail.com."
     },
     "retention": {
       "title": "Conservation des données",
-      "content": "Vos données sont conservées pendant la durée de votre utilisation du service et jusqu'à 3 ans après votre dernière activité, sauf obligation légale contraire."
+      "content": "Tes données sont conservées pendant la durée de ton utilisation du service et jusqu'à 3 ans après ta dernière activité, sauf obligation légale contraire."
     },
     "contact": {
       "title": "Contact DPO",
-      "content": "Pour toute question relative à la protection de vos données, vous pouvez contacter notre Délégué à la Protection des Données à l'adresse : yuzu.contactme@gmail.com"
+      "content": "Pour toute question relative à la protection de tes données, tu peux contacter notre Délégué à la Protection des Données à l'adresse : yuzu.contactme@gmail.com"
     }
   },
   "terms": {
     "title": "Conditions Générales d'Utilisation",
-    "intro": "Les présentes conditions générales d'utilisation régissent l'accès et l'utilisation de l'application Yuzu et du site web yuzulabs.fr.",
+    "intro": "Les présentes conditions générales d'utilisation régissent l'accès et l'utilisation de l'application Yuzu et du site web yuzulabs.app.",
     "object": {
       "title": "Objet du service",
       "content": "Yuzu est une application de fitness et de bien-être proposant des programmes d'étirements, des exercices de soulagement des douleurs et des techniques anti-stress."
@@ -159,7 +159,7 @@
     },
     "responsibility": {
       "title": "Responsabilité",
-      "content": "Yuzu Labs ne saurait être tenue responsable des blessures pouvant survenir lors de la pratique des exercices. Consultez un professionnel de santé avant de commencer tout programme d'exercices."
+      "content": "Yuzu Labs ne saurait être tenue responsable des blessures pouvant survenir lors de la pratique des exercices. Consulte un professionnel de santé avant de commencer tout programme d'exercices."
     },
     "modification": {
       "title": "Modification des CGU",
@@ -171,4 +171,3 @@
     }
   }
 }
-
