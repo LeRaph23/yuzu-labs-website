@@ -1,6 +1,8 @@
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { locales } from '@/lib/i18n';
 
+export const runtime = 'edge';
+
 type Props = {
   params: { locale: string };
 };

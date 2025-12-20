@@ -6,6 +6,8 @@ import Mascot from '@/components/Mascot';
 import Testimonials from '@/components/Testimonials';
 import Contact from '@/components/Contact';
 
+export const runtime = 'edge';
+
 type Props = {
   params: { locale: string };
 };
