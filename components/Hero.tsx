@@ -3,6 +3,7 @@
 import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
 import { ArrowRight, Sparkles } from 'lucide-react';
+import Image from 'next/image';
 
 export default function Hero() {
   const t = useTranslations('hero');
@@ -78,24 +79,20 @@ export default function Hero() {
             className="relative flex items-center justify-center"
           >
             <div className="relative">
-              {/* Main lemon mascot placeholder */}
-              <div className="w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 bg-gradient-to-br from-yellow-favorite via-yellow-cursor to-orange-primary rounded-full flex items-center justify-center shadow-2xl shadow-orange-primary/30 animate-float">
-                <div className="text-center">
-                  {/* Eyes */}
-                  <div className="flex justify-center gap-8 mb-4">
-                    <div className="w-8 h-10 bg-foreground rounded-full relative">
-                      <div className="absolute top-1 right-1 w-3 h-3 bg-white rounded-full" />
-                    </div>
-                    <div className="w-8 h-10 bg-foreground rounded-full relative">
-                      <div className="absolute top-1 right-1 w-3 h-3 bg-white rounded-full" />
-                    </div>
-                  </div>
-                  {/* Smile */}
-                  <div className="w-16 h-8 border-b-4 border-foreground rounded-b-full mx-auto" />
-                  {/* Leaf */}
-                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 w-6 h-10 bg-green-primary rounded-full transform -rotate-12" />
-                </div>
-              </div>
+              {/* Main Yuzu mascot */}
+              <motion.div
+                animate={{ y: [0, -15, 0] }}
+                transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+                className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96"
+              >
+                <Image
+                  src="/images/yuzu-wave.webp"
+                  alt="Yuzu mascotte"
+                  fill
+                  className="object-contain drop-shadow-2xl"
+                  priority
+                />
+              </motion.div>
 
               {/* Floating elements */}
               <motion.div
@@ -142,4 +139,3 @@ export default function Hero() {
     </section>
   );
 }
-
