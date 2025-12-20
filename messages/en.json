@@ -1,0 +1,174 @@
+{
+  "metadata": {
+    "title": "Yuzu Labs - Fitness and Wellness App",
+    "description": "Yuzu is your personal wellness coach. Stretching, pain relief, splits training and anti-stress exercises."
+  },
+  "header": {
+    "features": "Features",
+    "about": "About",
+    "contact": "Contact",
+    "download": "Download"
+  },
+  "hero": {
+    "badge": "Coming Soon",
+    "title": "Yuzu, your",
+    "titleHighlight": "wellness coach",
+    "subtitle": "Guided stretching, pain relief and anti-stress exercises. Achieve your flexibility goals with your favorite lemon companion.",
+    "cta": "Discover the app",
+    "ctaSecondary": "Learn more"
+  },
+  "features": {
+    "title": "Everything you need",
+    "subtitle": "Features designed for your daily wellness",
+    "painRelief": {
+      "title": "Pain Relief",
+      "description": "Targeted exercises to relieve tension in your back, neck and joints."
+    },
+    "stretching": {
+      "title": "Stretching Programs",
+      "description": "Structured sessions to improve your flexibility every day."
+    },
+    "splits": {
+      "title": "Splits Training",
+      "description": "A progressive program to safely achieve the splits."
+    },
+    "antiStress": {
+      "title": "Anti-Stress Exercises",
+      "description": "Breathing and relaxation techniques to calm your mind."
+    },
+    "progress": {
+      "title": "Progress Tracking",
+      "description": "Visualize your progress and stay motivated with detailed statistics."
+    },
+    "personalized": {
+      "title": "Personalized Programs",
+      "description": "Recommendations tailored to your level and goals."
+    }
+  },
+  "mascot": {
+    "title": "Meet Yuzu",
+    "subtitle": "Your wellness companion",
+    "description": "Yuzu is an energetic little lemon who accompanies you through all your exercises. Always encouraging, never sour!",
+    "bubble1": "You can do it!",
+    "bubble2": "Just a little more!",
+    "bubble3": "Great job, well done!"
+  },
+  "testimonials": {
+    "title": "What they say",
+    "subtitle": "Users who love Yuzu",
+    "testimonial1": {
+      "text": "Thanks to Yuzu, I finally achieved the splits! The program is progressive and very well explained.",
+      "author": "Marie L.",
+      "role": "User for 6 months"
+    },
+    "testimonial2": {
+      "text": "My back pain has significantly decreased. The exercises are perfectly adapted to my pace.",
+      "author": "Thomas D.",
+      "role": "User for 3 months"
+    },
+    "testimonial3": {
+      "text": "The Yuzu mascot motivates me every day! A simple but incredibly effective app.",
+      "author": "Sophie M.",
+      "role": "User for 1 year"
+    }
+  },
+  "contact": {
+    "title": "Contact us",
+    "subtitle": "Have a question? Don't hesitate to reach out",
+    "name": "Your name",
+    "email": "Your email",
+    "message": "Your message",
+    "send": "Send",
+    "success": "Message sent successfully!",
+    "error": "An error occurred. Please try again.",
+    "emailDirect": "Or email us directly at"
+  },
+  "footer": {
+    "description": "Yuzu Labs develops innovative wellness applications to improve your quality of life every day.",
+    "legal": "Legal Notice",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Use",
+    "rights": "All rights reserved",
+    "company": "Yuzu Labs SAS",
+    "address": "11 rue de Lorraine, 68490 PETIT-LANDAU, France",
+    "siren": "SIREN: 994879013"
+  },
+  "legal": {
+    "title": "Legal Notice",
+    "editor": {
+      "title": "Website Publisher",
+      "company": "Yuzu Labs",
+      "form": "Simplified Joint-Stock Company (SAS)",
+      "address": "11 rue de Lorraine, 68490 PETIT-LANDAU, France",
+      "siren": "SIREN: 994879013",
+      "director": "Publication Director: MEYER Raphaël",
+      "email": "Email: yuzu.contactme@gmail.com"
+    },
+    "hosting": {
+      "title": "Hosting",
+      "provider": "This website is hosted by Vercel Inc.",
+      "address": "340 S Lemon Ave #4133, Walnut, CA 91789, USA"
+    },
+    "intellectual": {
+      "title": "Intellectual Property",
+      "content": "All content on this website (texts, images, logos, illustrations) is the exclusive property of Yuzu Labs or its partners. Any reproduction, representation, modification, publication, or adaptation of all or part of the website elements, by any means or process, is prohibited without prior written authorization from Yuzu Labs."
+    }
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "intro": "Yuzu Labs is committed to protecting the privacy of users of its application and website. This privacy policy explains how we collect, use and protect your personal data.",
+    "collection": {
+      "title": "Data Collected",
+      "content": "We collect the following data: account information (email, name), application usage data, user preferences, and exercise progress data."
+    },
+    "usage": {
+      "title": "Data Usage",
+      "content": "Your data is used to: personalize your experience, improve our services, send you notifications about your progress, and provide customer support."
+    },
+    "cookies": {
+      "title": "Cookies",
+      "content": "Our website uses essential cookies for the service to function and analytical cookies to improve the user experience. You can disable cookies in your browser settings."
+    },
+    "rights": {
+      "title": "Your Rights (GDPR)",
+      "content": "In accordance with the GDPR, you have the right to access, rectify, delete and port your data. To exercise these rights, contact us at yuzu.contactme@gmail.com."
+    },
+    "retention": {
+      "title": "Data Retention",
+      "content": "Your data is kept for the duration of your use of the service and up to 3 years after your last activity, unless otherwise required by law."
+    },
+    "contact": {
+      "title": "DPO Contact",
+      "content": "For any questions regarding the protection of your data, you can contact our Data Protection Officer at: yuzu.contactme@gmail.com"
+    }
+  },
+  "terms": {
+    "title": "Terms of Use",
+    "intro": "These terms of use govern access to and use of the Yuzu application and the yuzulabs.fr website.",
+    "object": {
+      "title": "Purpose of the Service",
+      "content": "Yuzu is a fitness and wellness application offering stretching programs, pain relief exercises and anti-stress techniques."
+    },
+    "access": {
+      "title": "Access to the Service",
+      "content": "Access to the application requires creating a user account. The user agrees to provide accurate information and to maintain the confidentiality of their credentials."
+    },
+    "intellectual": {
+      "title": "Intellectual Property",
+      "content": "All application content (exercises, illustrations, texts, videos) is protected by copyright and belongs to Yuzu Labs. Any unauthorized reproduction is prohibited."
+    },
+    "responsibility": {
+      "title": "Liability",
+      "content": "Yuzu Labs cannot be held responsible for injuries that may occur during exercise practice. Consult a healthcare professional before starting any exercise program."
+    },
+    "modification": {
+      "title": "Modification of Terms",
+      "content": "Yuzu Labs reserves the right to modify these Terms at any time. Users will be notified of any significant changes."
+    },
+    "law": {
+      "title": "Applicable Law",
+      "content": "These Terms are governed by French law. Any dispute shall be submitted to the competent courts of Mulhouse."
+    }
+  }
+}
+
