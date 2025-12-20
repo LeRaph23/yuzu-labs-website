@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { useTranslations, useLocale } from 'next-intl';
 
 export default function Footer() {
@@ -12,10 +13,13 @@ export default function Footer() {
           {/* Company Info */}
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 bg-gradient-to-br from-yellow-favorite to-orange-primary rounded-full flex items-center justify-center">
-                <span className="text-white font-bold text-lg">Y</span>
-              </div>
-              <span className="font-bold text-xl">YuzuLabs</span>
+              <Image
+                src="/images/logo_yuzu_labs.png"
+                alt="YuzuLabs Logo"
+                width={150}
+                height={40}
+                className="h-10 w-auto brightness-0 invert"
+              />
             </div>
             <p className="text-white/80 text-sm leading-relaxed">
               {t('description')}
