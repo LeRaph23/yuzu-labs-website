@@ -2,6 +2,7 @@
 
 import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 export default function Mascot() {
   const t = useTranslations('mascot');
@@ -19,47 +20,19 @@ export default function Mascot() {
             className="relative flex items-center justify-center order-2 lg:order-1"
           >
             <div className="relative">
-              {/* Main lemon mascot */}
+              {/* Main mascot image */}
               <motion.div
-                animate={{ rotate: [0, 5, -5, 0] }}
-                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                className="w-56 h-64 sm:w-64 sm:h-72 bg-gradient-to-br from-yellow-favorite via-yellow-cursor to-orange-light rounded-[40%] flex items-center justify-center shadow-2xl shadow-orange-primary/20 relative"
+                animate={{ y: [0, -10, 0] }}
+                transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+                className="relative w-64 h-64 sm:w-80 sm:h-80"
               >
-                {/* Face */}
-                <div className="text-center">
-                  {/* Eyes */}
-                  <div className="flex justify-center gap-6 mb-3">
-                    <motion.div
-                      animate={{ scaleY: [1, 0.1, 1] }}
-                      transition={{ duration: 3, repeat: Infinity, repeatDelay: 2 }}
-                      className="w-6 h-8 bg-foreground rounded-full relative"
-                    >
-                      <div className="absolute top-1 right-0.5 w-2.5 h-2.5 bg-white rounded-full" />
-                    </motion.div>
-                    <motion.div
-                      animate={{ scaleY: [1, 0.1, 1] }}
-                      transition={{ duration: 3, repeat: Infinity, repeatDelay: 2 }}
-                      className="w-6 h-8 bg-foreground rounded-full relative"
-                    >
-                      <div className="absolute top-1 right-0.5 w-2.5 h-2.5 bg-white rounded-full" />
-                    </motion.div>
-                  </div>
-                  {/* Blush */}
-                  <div className="flex justify-center gap-16 mb-2">
-                    <div className="w-6 h-3 bg-orange-light/60 rounded-full" />
-                    <div className="w-6 h-3 bg-orange-light/60 rounded-full" />
-                  </div>
-                  {/* Smile */}
-                  <div className="w-12 h-6 border-b-[3px] border-foreground rounded-b-full mx-auto" />
-                </div>
-                {/* Leaf */}
-                <div className="absolute -top-6 left-1/2 -translate-x-1/2">
-                  <div className="w-4 h-12 bg-green-primary rounded-full transform -rotate-12" />
-                  <div className="w-4 h-10 bg-green-light rounded-full transform rotate-12 -mt-6 ml-2" />
-                </div>
-                {/* Arms */}
-                <div className="absolute left-0 top-1/2 -translate-x-4 w-8 h-4 bg-yellow-favorite rounded-full transform -rotate-45" />
-                <div className="absolute right-0 top-1/2 translate-x-4 w-8 h-4 bg-yellow-favorite rounded-full transform rotate-45" />
+                <Image
+                  src="/images/yuzu-wave.webp"
+                  alt="Yuzu mascotte"
+                  fill
+                  className="object-contain drop-shadow-2xl"
+                  priority
+                />
               </motion.div>
 
               {/* Speech Bubbles */}
@@ -68,7 +41,7 @@ export default function Mascot() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.3 }}
-                className="absolute -top-8 -right-8 bg-yellow-bubble px-4 py-2 rounded-2xl rounded-bl-none shadow-md"
+                className="absolute -top-4 -right-4 bg-yellow-bubble px-4 py-2 rounded-2xl rounded-bl-none shadow-md"
               >
                 <p className="text-sm font-medium text-orange-brown">{t('bubble1')}</p>
               </motion.div>
@@ -78,7 +51,7 @@ export default function Mascot() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.5 }}
-                className="absolute -bottom-4 -left-12 bg-yellow-bubble px-4 py-2 rounded-2xl rounded-br-none shadow-md"
+                className="absolute -bottom-4 -left-8 bg-yellow-bubble px-4 py-2 rounded-2xl rounded-br-none shadow-md"
               >
                 <p className="text-sm font-medium text-orange-brown">{t('bubble2')}</p>
               </motion.div>
@@ -88,7 +61,7 @@ export default function Mascot() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.7 }}
-                className="absolute top-1/3 -right-16 bg-yellow-bubble px-4 py-2 rounded-2xl rounded-tl-none shadow-md"
+                className="absolute top-1/3 -right-12 bg-yellow-bubble px-4 py-2 rounded-2xl rounded-tl-none shadow-md"
               >
                 <p className="text-sm font-medium text-orange-brown">{t('bubble3')}</p>
               </motion.div>
@@ -106,32 +79,74 @@ export default function Mascot() {
             <span className="inline-block text-green-primary font-semibold mb-2">
               {t('subtitle')}
             </span>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6 text-left">
               {t('title')} 🍋
             </h2>
-            <p className="text-lg text-foreground/70 leading-relaxed mb-8">
+            <p className="text-lg text-foreground/70 leading-relaxed mb-8 text-left">
               {t('description')}
             </p>
 
-            {/* Stats or highlights */}
+            {/* Stats */}
             <div className="grid grid-cols-3 gap-4">
               <div className="text-center p-4 bg-green-pale rounded-xl">
-                <div className="text-2xl font-bold text-green-primary">100+</div>
+                <div className="text-2xl font-bold text-green-primary">300+</div>
                 <div className="text-sm text-foreground/60">Exercices</div>
               </div>
               <div className="text-center p-4 bg-orange-light/50 rounded-xl">
-                <div className="text-2xl font-bold text-orange-primary">15min</div>
-                <div className="text-sm text-foreground/60">Par jour</div>
+                <div className="text-2xl font-bold text-orange-primary">0</div>
+                <div className="text-sm text-foreground/60">Obligation</div>
               </div>
               <div className="text-center p-4 bg-yellow-bubble rounded-xl">
-                <div className="text-2xl font-bold text-yellow-favorite">∞</div>
-                <div className="text-sm text-foreground/60">Motivation</div>
+                <div className="text-2xl font-bold text-yellow-favorite">24/7</div>
+                <div className="text-sm text-foreground/60">Disponible</div>
               </div>
             </div>
           </motion.div>
         </div>
+
+        {/* Additional mascot poses */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          className="mt-20 flex justify-center items-end gap-8 sm:gap-16"
+        >
+          <motion.div
+            whileHover={{ scale: 1.05, rotate: -5 }}
+            className="relative w-32 h-32 sm:w-40 sm:h-40"
+          >
+            <Image
+              src="/images/yuzu-splits.webp"
+              alt="Yuzu fait le grand écart"
+              fill
+              className="object-contain drop-shadow-lg"
+            />
+          </motion.div>
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            className="relative w-36 h-36 sm:w-48 sm:h-48"
+          >
+            <Image
+              src="/images/yuzu-wave.webp"
+              alt="Yuzu dit bonjour"
+              fill
+              className="object-contain drop-shadow-lg"
+            />
+          </motion.div>
+          <motion.div
+            whileHover={{ scale: 1.05, rotate: 5 }}
+            className="relative w-32 h-32 sm:w-40 sm:h-40"
+          >
+            <Image
+              src="/images/yuzu-strong.webp"
+              alt="Yuzu montre ses muscles"
+              fill
+              className="object-contain drop-shadow-lg"
+            />
+          </motion.div>
+        </motion.div>
       </div>
     </section>
   );
 }
-
