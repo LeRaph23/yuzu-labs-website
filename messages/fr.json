@@ -106,8 +106,8 @@
     },
     "hosting": {
       "title": "Hébergement",
-      "provider": "Ce site est hébergé par Vercel Inc.",
-      "address": "340 S Lemon Ave #4133, Walnut, CA 91789, USA"
+      "provider": "Ce site est hébergé par Cloudflare, Inc.",
+      "address": "101 Townsend St, San Francisco, CA 94107, USA"
     },
     "intellectual": {
       "title": "Propriété intellectuelle",
