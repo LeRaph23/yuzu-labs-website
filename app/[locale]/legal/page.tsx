@@ -1,7 +1,19 @@
-import { useTranslations } from 'next-intl';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
+import { locales } from '@/lib/i18n';
 
-export default function LegalPage() {
-  const t = useTranslations('legal');
+type Props = {
+  params: { locale: string };
+};
+
+export function generateStaticParams() {
+  return locales.map((locale) => ({ locale }));
+}
+
+export default async function LegalPage({ params: { locale } }: Props) {
+  // Enable static rendering
+  setRequestLocale(locale);
+  
+  const t = await getTranslations('legal');
 
   return (
     <div className="min-h-screen bg-background py-24 px-4">

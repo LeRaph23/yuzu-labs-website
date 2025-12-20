@@ -1,7 +1,19 @@
-import { useTranslations } from 'next-intl';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
+import { locales } from '@/lib/i18n';
 
-export default function PrivacyPage() {
-  const t = useTranslations('privacy');
+type Props = {
+  params: { locale: string };
+};
+
+export function generateStaticParams() {
+  return locales.map((locale) => ({ locale }));
+}
+
+export default async function PrivacyPage({ params: { locale } }: Props) {
+  // Enable static rendering
+  setRequestLocale(locale);
+  
+  const t = await getTranslations('privacy');
 
   const sections = [
     { key: 'collection', title: t('collection.title'), content: t('collection.content') },

@@ -1,7 +1,19 @@
-import { useTranslations } from 'next-intl';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
+import { locales } from '@/lib/i18n';
 
-export default function TermsPage() {
-  const t = useTranslations('terms');
+type Props = {
+  params: { locale: string };
+};
+
+export function generateStaticParams() {
+  return locales.map((locale) => ({ locale }));
+}
+
+export default async function TermsPage({ params: { locale } }: Props) {
+  // Enable static rendering
+  setRequestLocale(locale);
+  
+  const t = await getTranslations('terms');
 
   const sections = [
     { key: 'object', title: t('object.title'), content: t('object.content') },
