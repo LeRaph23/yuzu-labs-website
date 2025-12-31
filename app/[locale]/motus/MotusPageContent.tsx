@@ -1,8 +1,8 @@
 'use client';
 
 import { useLocale } from 'next-intl';
-import { motion } from 'framer-motion';
 import { ArrowRight, Sparkles, Activity, Users, Heart, Zap, Target, Clock } from 'lucide-react';
+import Image from 'next/image';
 import Link from 'next/link';
 
 export default function MotusPageContent() {
@@ -67,24 +67,14 @@ export default function MotusPageContent() {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Text Content */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="text-left"
-            >
+            <div className="text-left animate-fade-in">
               {/* Badge */}
-              <motion.div
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: 0.2 }}
-                className="inline-flex items-center gap-2 bg-blue-100 border border-blue-200 px-4 py-2 rounded-full mb-6"
-              >
+              <div className="inline-flex items-center gap-2 bg-blue-100 border border-blue-200 px-4 py-2 rounded-full mb-6">
                 <Sparkles size={16} className="text-blue-600" />
                 <span className="text-sm font-medium text-blue-600">
                   {locale === 'fr' ? 'Bientôt disponible' : 'Coming Soon'}
                 </span>
-              </motion.div>
+              </div>
 
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
                 {locale === 'fr' ? 'Motus, ta' : 'Motus, your'}{' '}
@@ -101,64 +91,45 @@ export default function MotusPageContent() {
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <motion.a
+                <a
                   href="#features"
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
-                  className="inline-flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-500 text-white px-8 py-4 rounded-full font-semibold transition-all shadow-lg shadow-blue-600/25"
+                  className="inline-flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-500 text-white px-8 py-4 rounded-full font-semibold transition-all shadow-lg shadow-blue-600/25 hover:scale-105"
                 >
                   {locale === 'fr' ? "Découvrir l'app" : 'Discover the app'}
                   <ArrowRight size={20} />
-                </motion.a>
+                </a>
                 <Link
                   href={`/${locale}/motus/privacy`}
-                  className="inline-flex items-center justify-center gap-2 bg-white hover:bg-blue-50 text-blue-600 px-8 py-4 rounded-full font-semibold transition-all border-2 border-blue-600"
+                  className="inline-flex items-center justify-center gap-2 bg-white hover:bg-blue-50 text-blue-600 px-8 py-4 rounded-full font-semibold transition-all border-2 border-blue-600 hover:scale-105"
                 >
                   {locale === 'fr' ? 'Confidentialité' : 'Privacy'}
                 </Link>
               </div>
-            </motion.div>
+            </div>
 
-            {/* Illustration */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              className="relative flex items-center justify-center"
-            >
-              <div className="relative">
-                <motion.div
-                  animate={{ y: [0, -15, 0] }}
-                  transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-                  className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 bg-gradient-to-br from-blue-100 to-blue-200 rounded-3xl flex items-center justify-center"
-                >
-                  <Activity size={120} className="text-blue-600" />
-                </motion.div>
-
-                {/* Floating elements */}
-                <motion.div
-                  animate={{ y: [0, -10, 0] }}
-                  transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-                  className="absolute -top-4 -right-4 w-16 h-16 bg-orange-100 rounded-2xl flex items-center justify-center shadow-lg"
-                >
-                  <span className="text-2xl">💪</span>
-                </motion.div>
-                <motion.div
-                  animate={{ y: [0, 10, 0] }}
-                  transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
-                  className="absolute -bottom-4 -left-4 w-14 h-14 bg-blue-100 rounded-2xl flex items-center justify-center shadow-lg"
-                >
-                  <span className="text-xl">🏃</span>
-                </motion.div>
-                <motion.div
-                  animate={{ y: [0, -8, 0] }}
-                  transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-                  className="absolute top-1/2 -right-8 w-12 h-12 bg-green-100 rounded-2xl flex items-center justify-center shadow-lg"
-                >
-                  <span className="text-lg">✨</span>
-                </motion.div>
+            {/* Logo Motus */}
+            <div className="relative flex items-center justify-center animate-fade-in-delayed">
+              <div className="relative w-72 h-72 sm:w-80 sm:h-80 lg:w-[420px] lg:h-[420px] animate-float">
+                <Image
+                  src="/images/motus/logo.png"
+                  alt="Motus Logo"
+                  fill
+                  className="object-contain drop-shadow-2xl"
+                  priority
+                />
               </div>
-            </motion.div>
+
+              {/* Floating elements */}
+              <div className="absolute -top-4 -right-4 w-16 h-16 bg-orange-100 rounded-2xl flex items-center justify-center shadow-lg animate-float-delayed">
+                <span className="text-2xl">💪</span>
+              </div>
+              <div className="absolute -bottom-4 -left-4 w-14 h-14 bg-blue-100 rounded-2xl flex items-center justify-center shadow-lg animate-float-slow">
+                <span className="text-xl">🏃</span>
+              </div>
+              <div className="absolute top-1/2 -right-8 w-12 h-12 bg-green-100 rounded-2xl flex items-center justify-center shadow-lg animate-float-delayed-slow">
+                <span className="text-lg">✨</span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -166,12 +137,7 @@ export default function MotusPageContent() {
       {/* Features Section */}
       <section id="features" className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
+          <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
               {locale === 'fr' ? 'Fonctionnalités' : 'Features'}
             </h2>
@@ -180,24 +146,21 @@ export default function MotusPageContent() {
                 ? 'Tout ce dont tu as besoin pour améliorer ta mobilité'
                 : 'Everything you need to improve your mobility'}
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-              <motion.div
+              <div
                 key={feature.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="bg-gray-50 rounded-2xl p-6 hover:shadow-lg transition-shadow"
+                className="bg-gray-50 rounded-2xl p-6 hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+                style={{ animationDelay: `${index * 100}ms` }}
               >
                 <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-4">
                   <feature.icon className="text-blue-600" size={24} />
                 </div>
                 <h3 className="text-xl font-semibold text-foreground mb-2">{feature.title}</h3>
                 <p className="text-foreground/70">{feature.description}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -206,37 +169,69 @@ export default function MotusPageContent() {
       {/* CTA Section */}
       <section className="py-24 bg-gradient-to-br from-blue-600 to-blue-700">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
-              {locale === 'fr' ? 'Prêt à bouger ?' : 'Ready to move?'}
-            </h2>
-            <p className="text-xl text-white/80 mb-8">
-              {locale === 'fr'
-                ? 'Motus arrive bientôt sur iOS et Android.'
-                : 'Motus is coming soon to iOS and Android.'}
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href={`/${locale}/motus/terms`}
-                className="inline-flex items-center justify-center gap-2 bg-white text-blue-600 px-8 py-4 rounded-full font-semibold transition-all hover:bg-blue-50"
-              >
-                {locale === 'fr' ? "Conditions d'utilisation" : 'Terms of Service'}
-              </Link>
-              <Link
-                href={`/${locale}/motus/privacy`}
-                className="inline-flex items-center justify-center gap-2 bg-transparent border-2 border-white text-white px-8 py-4 rounded-full font-semibold transition-all hover:bg-white/10"
-              >
-                {locale === 'fr' ? 'Politique de confidentialité' : 'Privacy Policy'}
-              </Link>
-            </div>
-          </motion.div>
+          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
+            {locale === 'fr' ? 'Prêt à bouger ?' : 'Ready to move?'}
+          </h2>
+          <p className="text-xl text-white/80 mb-8">
+            {locale === 'fr'
+              ? 'Motus arrive bientôt sur iOS et Android.'
+              : 'Motus is coming soon to iOS and Android.'}
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href={`/${locale}/motus/terms`}
+              className="inline-flex items-center justify-center gap-2 bg-white text-blue-600 px-8 py-4 rounded-full font-semibold transition-all hover:bg-blue-50 hover:scale-105"
+            >
+              {locale === 'fr' ? "Conditions d'utilisation" : 'Terms of Service'}
+            </Link>
+            <Link
+              href={`/${locale}/motus/privacy`}
+              className="inline-flex items-center justify-center gap-2 bg-transparent border-2 border-white text-white px-8 py-4 rounded-full font-semibold transition-all hover:bg-white/10 hover:scale-105"
+            >
+              {locale === 'fr' ? 'Politique de confidentialité' : 'Privacy Policy'}
+            </Link>
+          </div>
         </div>
       </section>
+
+      {/* CSS Animations */}
+      <style jsx>{`
+        @keyframes float {
+          0%, 100% { transform: translateY(0px); }
+          50% { transform: translateY(-15px); }
+        }
+        @keyframes float-delayed {
+          0%, 100% { transform: translateY(0px); }
+          50% { transform: translateY(-10px); }
+        }
+        @keyframes float-slow {
+          0%, 100% { transform: translateY(0px); }
+          50% { transform: translateY(10px); }
+        }
+        @keyframes fade-in {
+          from { opacity: 0; transform: translateY(20px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-float {
+          animation: float 3s ease-in-out infinite;
+        }
+        .animate-float-delayed {
+          animation: float-delayed 2s ease-in-out infinite;
+        }
+        .animate-float-slow {
+          animation: float-slow 2.5s ease-in-out infinite 0.5s;
+        }
+        .animate-float-delayed-slow {
+          animation: float-delayed 3s ease-in-out infinite 1s;
+        }
+        .animate-fade-in {
+          animation: fade-in 0.6s ease-out forwards;
+        }
+        .animate-fade-in-delayed {
+          animation: fade-in 0.6s ease-out 0.3s forwards;
+          opacity: 0;
+        }
+      `}</style>
     </>
   );
 }
-
