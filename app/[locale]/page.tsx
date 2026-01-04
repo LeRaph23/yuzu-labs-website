@@ -136,44 +136,6 @@ export default function HomePage() {
 
       {/* About Section */}
       <AboutSection locale={locale} />
-            <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-6">
-              {locale === 'fr' ? 'Notre mission' : 'Our mission'}
-            </h2>
-            <p className="text-lg text-foreground/70 leading-relaxed mb-8">
-              {locale === 'fr'
-                ? "Chez Yuzu Labs, nous croyons que le bien-être devrait être accessible à tous. Nos applications sont conçues pour t'accompagner au quotidien dans ta quête de mobilité, flexibilité et sérénité."
-                : 'At Yuzu Labs, we believe wellness should be accessible to everyone. Our apps are designed to support you daily in your quest for mobility, flexibility, and serenity.'}
-            </p>
-
-            <div className="grid sm:grid-cols-3 gap-8 mt-12">
-              <div className="text-center">
-                <div className="text-4xl font-bold bg-gradient-to-r from-green-600 to-blue-600 bg-clip-text text-transparent mb-2">
-                  2
-                </div>
-                <p className="text-foreground/70">
-                  {locale === 'fr' ? 'Applications' : 'Applications'}
-                </p>
-              </div>
-              <div className="text-center">
-                <div className="text-4xl font-bold bg-gradient-to-r from-green-600 to-blue-600 bg-clip-text text-transparent mb-2">
-                  500+
-                </div>
-                <p className="text-foreground/70">
-                  {locale === 'fr' ? 'Exercices' : 'Exercises'}
-                </p>
-              </div>
-              <div className="text-center">
-                <div className="text-4xl font-bold bg-gradient-to-r from-green-600 to-blue-600 bg-clip-text text-transparent mb-2">
-                  🇫🇷
-                </div>
-                <p className="text-foreground/70">
-                  {locale === 'fr' ? 'Made in France' : 'Made in France'}
-                </p>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
 
       {/* Contact Section */}
       <ContactSection locale={locale} />
@@ -282,8 +244,5 @@ function ContactSection({ locale }: { locale: string }) {
         </motion.div>
       </div>
     </section>
-  );
-}
-    </>
   );
 }
