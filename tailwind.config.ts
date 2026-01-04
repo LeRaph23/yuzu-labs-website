@@ -44,6 +44,35 @@ const config: Config = {
       fontFamily: {
         poppins: ['Poppins', 'sans-serif'],
       },
+      spacing: {
+        // Système de spacing basé sur 4px
+        18: '4.5rem', // 72px
+        88: '22rem', // 352px
+        112: '28rem', // 448px
+        128: '32rem', // 512px
+      },
+      borderRadius: {
+        // Border radius modernes et subtils
+        'xl': '0.75rem', // 12px
+        '2xl': '1rem', // 16px
+        '3xl': '1.5rem', // 24px
+      },
+      boxShadow: {
+        'subtle': '0 1px 2px 0 rgba(0, 0, 0, 0.03), 0 1px 3px 0 rgba(0, 0, 0, 0.06)',
+        'card': '0 1px 3px 0 rgba(0, 0, 0, 0.04), 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03)',
+        'card-hover': '0 4px 6px -1px rgba(0, 0, 0, 0.06), 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 2px 4px -1px rgba(0, 0, 0, 0.04)',
+        'elevated': '0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
+      },
+      transitionTimingFunction: {
+        'out': 'cubic-bezier(0.4, 0, 0.2, 1)',
+        'out-expo': 'cubic-bezier(0.16, 1, 0.3, 1)',
+      },
+      transitionDuration: {
+        'fast': '200ms',
+        'normal': '300ms',
+        'slow': '400ms',
+        'reveal': '600ms',
+      },
     },
   },
   plugins: [],

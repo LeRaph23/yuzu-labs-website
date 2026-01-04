@@ -80,7 +80,7 @@ export default function Mascot() {
               {t('subtitle')}
             </span>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6 text-left">
-              {t('title')} 🍋
+              {t('title')}
             </h2>
             <p className="text-lg text-foreground/70 leading-relaxed mb-8 text-left">
               {t('description')}

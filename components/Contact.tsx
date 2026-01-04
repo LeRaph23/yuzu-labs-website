@@ -2,11 +2,12 @@
 
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
-import { motion } from 'framer-motion';
+import { motion, useReducedMotion } from 'framer-motion';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 import { Send, Mail, CheckCircle, AlertCircle } from 'lucide-react';
+import { useScrollAnimation } from '@/lib/hooks/useScrollAnimation';
 
 const contactSchema = z.object({
   name: z.string().min(2, 'Name must be at least 2 characters'),
@@ -18,7 +19,9 @@ type ContactFormData = z.infer<typeof contactSchema>;
 
 export default function Contact() {
   const t = useTranslations('contact');
+  const shouldReduceMotion = useReducedMotion();
   const [status, setStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [sectionRef, sectionState] = useScrollAnimation({ threshold: 0.1 });
 
   const {
     register,
@@ -44,30 +47,41 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-24 px-4 bg-background">
+    <section ref={sectionRef} id="contact" className="py-32 px-4 bg-background">
       <div className="max-w-4xl mx-auto">
         {/* Section Header */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-12"
+          initial={false}
+          animate={{
+            opacity: sectionState.isVisible ? 1 : 0,
+            y: sectionState.isVisible ? 0 : 30,
+          }}
+          transition={{
+            duration: shouldReduceMotion ? 0.3 : 0.6,
+            ease: [0.4, 0, 0.2, 1],
+          }}
+          className="text-center mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-4">
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-6 tracking-tight">
             {t('title')}
           </h2>
-          <p className="text-lg text-foreground/70 max-w-2xl mx-auto">
+          <p className="text-lg text-foreground/60 max-w-2xl mx-auto">
             {t('subtitle')}
           </p>
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="bg-white rounded-3xl p-8 md:p-12 card-shadow"
+          initial={false}
+          animate={{
+            opacity: sectionState.isVisible ? 1 : 0,
+            y: sectionState.isVisible ? 0 : 30,
+          }}
+          transition={{
+            duration: shouldReduceMotion ? 0.3 : 0.6,
+            delay: shouldReduceMotion ? 0 : 0.15,
+            ease: [0.4, 0, 0.2, 1],
+          }}
+          className="bg-white rounded-2xl p-8 md:p-12 shadow-card border border-gray-100/50"
         >
           <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
             {/* Name Field */}
@@ -82,7 +96,7 @@ export default function Contact() {
                 type="text"
                 id="name"
                 {...register('name')}
-                className={`w-full px-4 py-3 rounded-xl border-2 transition-colors outline-none ${
+                className={`w-full px-4 py-3 rounded-xl border-2 transition-premium outline-none ${
                   errors.name
                     ? 'border-red-primary focus:border-red-primary'
                     : 'border-green-lighter focus:border-green-primary'
@@ -146,7 +160,7 @@ export default function Contact() {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="w-full bg-green-primary hover:bg-green-light disabled:opacity-50 disabled:cursor-not-allowed text-white py-4 rounded-xl font-semibold transition-all flex items-center justify-center gap-2"
+              className="w-full bg-green-primary hover:bg-green-light disabled:opacity-50 disabled:cursor-not-allowed text-white py-4 rounded-xl font-semibold transition-premium flex items-center justify-center gap-2 shadow-card"
             >
               {isSubmitting ? (
                 <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
@@ -183,13 +197,13 @@ export default function Contact() {
           </form>
 
           {/* Direct Email */}
-          <div className="mt-8 pt-8 border-t border-green-lighter text-center">
-            <p className="text-foreground/60 mb-2">{t('emailDirect')}</p>
+          <div className="mt-10 pt-8 border-t border-green-lighter/50 text-center">
+            <p className="text-foreground/50 mb-3 text-sm">{t('emailDirect')}</p>
             <a
               href="mailto:yuzu.contactme@gmail.com"
-              className="inline-flex items-center gap-2 text-green-primary hover:text-green-light font-semibold transition-colors"
+              className="inline-flex items-center gap-2 text-green-primary hover:text-green-light font-semibold transition-premium"
             >
-              <Mail size={20} />
+              <Mail size={18} />
               yuzu.contactme@gmail.com
             </a>
           </div>

@@ -1,7 +1,7 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import { motion } from 'framer-motion';
+import { motion, useReducedMotion } from 'framer-motion';
 import { 
   Heart, 
   Dumbbell, 
@@ -10,6 +10,7 @@ import {
   TrendingUp, 
   User 
 } from 'lucide-react';
+import { useScrollAnimation } from '@/lib/hooks/useScrollAnimation';
 
 const features = [
   { key: 'painRelief', icon: Heart, color: 'bg-red-light text-red-primary' },
@@ -22,22 +23,29 @@ const features = [
 
 export default function Features() {
   const t = useTranslations('features');
+  const shouldReduceMotion = useReducedMotion();
+  const [sectionRef, sectionState] = useScrollAnimation({ threshold: 0.1 });
 
   return (
-    <section id="features" className="py-24 px-4 bg-green-mint/30">
+    <section ref={sectionRef} id="features" className="py-32 px-4 bg-green-mint/20">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          initial={false}
+          animate={{
+            opacity: sectionState.isVisible ? 1 : 0,
+            y: sectionState.isVisible ? 0 : 30,
+          }}
+          transition={{
+            duration: shouldReduceMotion ? 0.3 : 0.6,
+            ease: [0.4, 0, 0.2, 1],
+          }}
+          className="text-center mb-20"
         >
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-4">
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-6 tracking-tight">
             {t('title')}
           </h2>
-          <p className="text-lg text-foreground/70 max-w-2xl mx-auto">
+          <p className="text-lg text-foreground/60 max-w-2xl mx-auto">
             {t('subtitle')}
           </p>
         </motion.div>
@@ -47,30 +55,65 @@ export default function Features() {
           {features.map((feature, index) => {
             const Icon = feature.icon;
             return (
-              <motion.div
+              <FeatureCard
                 key={feature.key}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                whileHover={{ y: -5 }}
-                className="bg-white rounded-2xl p-6 card-shadow transition-all hover:shadow-lg"
-              >
-                <div className={`w-14 h-14 ${feature.color} rounded-xl flex items-center justify-center mb-4`}>
-                  <Icon size={28} />
-                </div>
-                <h3 className="text-xl font-semibold text-foreground mb-2">
-                  {t(`${feature.key}.title`)}
-                </h3>
-                <p className="text-foreground/70 leading-relaxed">
-                  {t(`${feature.key}.description`)}
-                </p>
-              </motion.div>
+                feature={feature}
+                index={index}
+                t={t}
+                shouldReduceMotion={shouldReduceMotion}
+                sectionVisible={sectionState.isVisible}
+              />
             );
           })}
         </div>
       </div>
     </section>
+  );
+}
+
+function FeatureCard({
+  feature,
+  index,
+  t,
+  shouldReduceMotion,
+  sectionVisible,
+}: {
+  feature: typeof features[0];
+  index: number;
+  t: (key: string) => string;
+  shouldReduceMotion: boolean | null;
+  sectionVisible: boolean;
+}) {
+  const Icon = feature.icon;
+  const [ref, state] = useScrollAnimation({ threshold: 0.15 });
+
+  return (
+    <motion.div
+      ref={ref}
+      initial={false}
+      animate={{
+        opacity: state.isVisible && sectionVisible ? 1 : 0,
+        y: state.isVisible && sectionVisible ? 0 : 30,
+        scale: state.isVisible && sectionVisible ? 1 : 0.96,
+      }}
+      transition={{
+        duration: shouldReduceMotion ? 0.3 : 0.5,
+        delay: shouldReduceMotion ? 0 : index * 0.08,
+        ease: [0.4, 0, 0.2, 1],
+      }}
+      whileHover={shouldReduceMotion ? {} : { y: -4, scale: 1.02 }}
+      className="bg-white rounded-2xl p-8 shadow-card card-hover border border-gray-100/50"
+    >
+      <div className={`w-14 h-14 ${feature.color} rounded-xl flex items-center justify-center mb-6`}>
+        <Icon size={28} />
+      </div>
+      <h3 className="text-xl font-semibold text-foreground mb-3">
+        {t(`${feature.key}.title`)}
+      </h3>
+      <p className="text-foreground/60 leading-relaxed text-sm">
+        {t(`${feature.key}.description`)}
+      </p>
+    </motion.div>
   );
 }
 

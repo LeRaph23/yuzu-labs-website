@@ -5,6 +5,7 @@ import { notFound } from 'next/navigation';
 import { locales, type Locale } from '@/lib/i18n';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import ScrollProgress from '@/components/ScrollProgress';
 
 type Props = {
   children: React.ReactNode;
@@ -46,6 +47,7 @@ export default async function LocaleLayout({ children, params: { locale } }: Pro
     <html lang={locale} suppressHydrationWarning>
       <body className="font-poppins antialiased">
         <NextIntlClientProvider messages={messages}>
+          <ScrollProgress />
           <Header />
           <main>{children}</main>
           <Footer />
