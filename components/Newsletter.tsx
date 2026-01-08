@@ -67,7 +67,7 @@ export default function Newsletter({
             </h2>
           )}
           {subtitle && (
-            <p className="text-lg text-foreground/70 dark:text-foreground/80 mb-12 max-w-2xl mx-auto">
+            <p className="text-lg text-foreground dark:text-white mb-12 max-w-2xl mx-auto">
               {subtitle}
             </p>
           )}

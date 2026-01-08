@@ -91,7 +91,7 @@ export default function HomePage() {
               Yuzu Labs
             </h1>
 
-            <p className="text-lg sm:text-xl text-foreground/70 dark:text-foreground/80 mb-12 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-lg sm:text-xl text-foreground dark:text-white mb-12 max-w-2xl mx-auto leading-relaxed">
               {locale === 'fr'
                 ? 'Nous développons des applications de bien-être innovantes pour améliorer ta qualité de vie au quotidien.'
                 : 'We develop innovative wellness applications to improve your quality of life every day.'}
@@ -186,7 +186,7 @@ function AppsSection({ locale, apps }: { locale: string; apps: App[] }) {
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-6 tracking-tight uppercase">
             {locale === 'fr' ? 'NOS APPLICATIONS' : 'OUR APPLICATIONS'}
           </h2>
-          <p className="text-lg text-foreground/60 dark:text-foreground/70 max-w-2xl mx-auto">
+          <p className="text-lg text-foreground dark:text-white max-w-2xl mx-auto">
             {locale === 'fr'
               ? 'Découvre nos applications de bien-être et mobilité'
               : 'Discover our wellness and mobility applications'}
@@ -230,13 +230,13 @@ function AppsSection({ locale, apps }: { locale: string; apps: App[] }) {
                       </div>
                       <div>
                         <h3 className="text-2xl font-bold text-foreground">{app.name}</h3>
-                        <p className="text-sm text-foreground/60 dark:text-foreground/70">
+                        <p className="text-sm text-foreground dark:text-white">
                           {app.tagline}
                         </p>
                       </div>
                     </div>
 
-                    <p className="text-foreground/70 dark:text-foreground/80 mb-6 leading-relaxed text-sm">
+                    <p className="text-foreground dark:text-white mb-6 leading-relaxed text-sm">
                       {app.description}
                     </p>
 
@@ -278,7 +278,7 @@ function StatsSection({ locale }: { locale: string }) {
           <h2 className="text-4xl sm:text-5xl font-bold text-foreground mb-8 tracking-tight uppercase">
             {locale === 'fr' ? 'NOTRE MISSION' : 'OUR MISSION'}
           </h2>
-          <p className="text-lg text-foreground/60 dark:text-foreground/70 leading-relaxed mb-16 max-w-2xl mx-auto">
+          <p className="text-lg text-foreground dark:text-white leading-relaxed mb-16 max-w-2xl mx-auto">
             {locale === 'fr'
               ? "Chez Yuzu Labs, nous croyons que le bien-être devrait être accessible à tous. Nos applications sont conçues pour t'accompagner au quotidien dans ta quête de mobilité, flexibilité et sérénité."
               : 'At Yuzu Labs, we believe wellness should be accessible to everyone. Our apps are designed to support you daily in your quest for mobility, flexibility, and serenity.'}
@@ -287,19 +287,19 @@ function StatsSection({ locale }: { locale: string }) {
           <div className="grid sm:grid-cols-3 gap-12 mt-16">
             <div className="text-center">
               <div className="text-5xl font-bold text-foreground mb-3">2</div>
-              <p className="text-foreground/60 dark:text-foreground/70 text-sm font-medium">
+              <p className="text-foreground dark:text-white text-sm font-medium">
                 {locale === 'fr' ? 'Applications' : 'Applications'}
               </p>
             </div>
             <div className="text-center">
               <div className="text-5xl font-bold text-foreground mb-3">500+</div>
-              <p className="text-foreground/60 dark:text-foreground/70 text-sm font-medium">
+              <p className="text-foreground dark:text-white text-sm font-medium">
                 {locale === 'fr' ? 'Exercices' : 'Exercises'}
               </p>
             </div>
             <div className="text-center">
               <div className="text-5xl font-bold text-foreground mb-3">FR</div>
-              <p className="text-foreground/60 dark:text-foreground/70 text-sm font-medium">
+              <p className="text-foreground dark:text-white text-sm font-medium">
                 {locale === 'fr' ? 'Made in France' : 'Made in France'}
               </p>
             </div>

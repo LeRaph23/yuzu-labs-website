@@ -135,19 +135,19 @@ export default function MotusPage() {
           <div className="grid sm:grid-cols-3 gap-12 text-center">
             <div>
               <div className="text-5xl font-bold text-foreground mb-3">200+</div>
-              <p className="text-foreground/60 dark:text-foreground/70 text-sm font-medium">
+              <p className="text-foreground dark:text-white text-sm font-medium">
                 {locale === 'fr' ? 'Exercices' : 'Exercises'}
               </p>
             </div>
             <div>
               <div className="text-5xl font-bold text-foreground mb-3">50+</div>
-              <p className="text-foreground/60 dark:text-foreground/70 text-sm font-medium">
+              <p className="text-foreground dark:text-white text-sm font-medium">
                 {locale === 'fr' ? 'Kinés partenaires' : 'Partner Physios'}
               </p>
             </div>
             <div>
               <div className="text-5xl font-bold text-foreground mb-3">5K+</div>
-              <p className="text-foreground/60 dark:text-foreground/70 text-sm font-medium">
+              <p className="text-foreground dark:text-white text-sm font-medium">
                 {locale === 'fr' ? 'Utilisateurs' : 'Users'}
               </p>
             </div>

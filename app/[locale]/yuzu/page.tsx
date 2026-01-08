@@ -135,19 +135,19 @@ export default function YuzuPage() {
           <div className="grid sm:grid-cols-3 gap-12 text-center">
             <div>
               <div className="text-5xl font-bold text-foreground mb-3">500+</div>
-              <p className="text-foreground/60 dark:text-foreground/70 text-sm font-medium">
+              <p className="text-foreground dark:text-white text-sm font-medium">
                 {locale === 'fr' ? 'Exercices' : 'Exercises'}
               </p>
             </div>
             <div>
               <div className="text-5xl font-bold text-foreground mb-3">10K+</div>
-              <p className="text-foreground/60 dark:text-foreground/70 text-sm font-medium">
+              <p className="text-foreground dark:text-white text-sm font-medium">
                 {locale === 'fr' ? 'Utilisateurs' : 'Users'}
               </p>
             </div>
             <div>
               <div className="text-5xl font-bold text-foreground mb-3">4.8</div>
-              <p className="text-foreground/60 dark:text-foreground/70 text-sm font-medium">
+              <p className="text-foreground dark:text-white text-sm font-medium">
                 {locale === 'fr' ? 'Note App Store' : 'App Store Rating'}
               </p>
             </div>

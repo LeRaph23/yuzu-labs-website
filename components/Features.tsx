@@ -56,7 +56,7 @@ export default function Features({
               </h2>
             )}
             {subtitle && (
-              <p className="text-lg text-foreground/60 dark:text-foreground/70 max-w-2xl mx-auto">
+              <p className="text-lg text-foreground dark:text-white max-w-2xl mx-auto">
                 {subtitle}
               </p>
             )}
@@ -128,7 +128,7 @@ function FeatureCard({
       </h3>
 
       {/* Description */}
-      <p className="text-foreground/60 dark:text-foreground/70 leading-relaxed text-sm mb-6">
+      <p className="text-foreground dark:text-white leading-relaxed text-sm mb-6">
         {feature.description}
       </p>
 

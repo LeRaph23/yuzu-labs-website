@@ -57,7 +57,7 @@ export default function Testimonials({
               </h2>
             )}
             {subtitle && (
-              <p className="text-lg text-foreground/60 dark:text-foreground/70 max-w-2xl mx-auto">
+              <p className="text-lg text-foreground dark:text-white max-w-2xl mx-auto">
                 {subtitle}
               </p>
             )}
@@ -92,7 +92,7 @@ export default function Testimonials({
             className="text-center mt-12"
           >
             <div className="inline-flex items-center gap-2 bg-[#f4f4f4] dark:bg-white px-6 py-3 rounded-full">
-              <span className="text-foreground/60 dark:text-foreground/70 text-sm font-medium">
+              <span className="text-foreground dark:text-white text-sm font-medium">
                 {userCount} {userCount.includes('+') ? 'utilisateurs' : ''}
               </span>
             </div>
@@ -158,7 +158,7 @@ function TestimonialCard({
       </div>
 
       {/* Citation avec guillemets stylisés */}
-      <p className="text-foreground/70 dark:text-foreground/80 leading-relaxed mb-8 text-sm italic relative pl-4">
+      <p className="text-foreground dark:text-white leading-relaxed mb-8 text-sm italic relative pl-4">
         <span className="absolute left-0 top-0 text-4xl text-foreground/20 dark:text-foreground/30 font-serif leading-none">
           &ldquo;
         </span>
@@ -184,7 +184,7 @@ function TestimonialCard({
           <div className="font-semibold text-foreground text-sm">
             {testimonial.author}
           </div>
-          <div className="text-xs text-foreground/50 dark:text-foreground/60">
+          <div className="text-xs text-foreground dark:text-white">
             {testimonial.role}
           </div>
         </div>
