@@ -9,6 +9,8 @@ import { useScrollAnimation } from '@/lib/hooks/useScrollAnimation';
 import AppMockup from '@/components/AppMockup';
 import Newsletter from '@/components/Newsletter';
 
+export const runtime = 'edge';
+
 interface App {
   name: string;
   tagline: string;
