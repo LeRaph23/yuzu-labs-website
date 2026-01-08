@@ -130,7 +130,7 @@ export default function YuzuPage() {
       />
 
       {/* Section Statistiques */}
-      <section className="py-24 bg-[#f4f4f4] dark:bg-white/10">
+      <section className="py-24 bg-[#f4f4f4] dark:bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid sm:grid-cols-3 gap-12 text-center">
             <div>

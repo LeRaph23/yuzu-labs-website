@@ -110,7 +110,7 @@ function FeatureCard({
       }}
       whileHover={shouldReduceMotion ? {} : { y: -4, scale: 1.02 }}
       className={`rounded-2xl p-8 shadow-card card-hover border border-[#231212]/5 dark:border-white/10 ${
-        feature.bgColor || 'bg-[#f4f4f4] dark:bg-white/10'
+        feature.bgColor || 'bg-[#f4f4f4] dark:bg-white'
       }`}
     >
       {/* Icône outline */}

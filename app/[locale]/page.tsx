@@ -56,8 +56,8 @@ export default function HomePage() {
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 bg-white dark:bg-[#231212]">
         {/* Formes organiques en arrière-plan */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-20 left-10 w-96 h-96 bg-[#e3e2f7]/20 dark:bg-white/5 rounded-full blur-3xl" />
-          <div className="absolute bottom-20 right-10 w-[500px] h-[500px] bg-[#f4f4f4]/30 dark:bg-white/5 rounded-full blur-3xl" />
+          <div className="absolute top-20 left-10 w-96 h-96 bg-[#e3e2f7]/20 dark:bg-[#231212] rounded-full blur-3xl" />
+          <div className="absolute bottom-20 right-10 w-[500px] h-[500px] bg-[#f4f4f4]/30 dark:bg-[#231212] rounded-full blur-3xl" />
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
@@ -78,7 +78,7 @@ export default function HomePage() {
                 delay: shouldReduceMotion ? 0 : 0.15,
                 duration: 0.4,
               }}
-              className="inline-flex items-center gap-2 bg-[#f4f4f4] dark:bg-white/10 border border-[#231212]/10 dark:border-white/10 px-4 py-1.5 rounded-full mb-8 shadow-subtle"
+              className="inline-flex items-center gap-2 bg-[#f4f4f4] dark:bg-white border border-[#231212]/10 dark:border-white/10 px-4 py-1.5 rounded-full mb-8 shadow-subtle"
             >
               <Sparkles size={14} className="text-foreground" />
               <span className="text-sm font-medium text-foreground">
@@ -169,7 +169,7 @@ function AppsSection({ locale, apps }: { locale: string; apps: App[] }) {
   const [ref, scrollState] = useScrollAnimation({ threshold: 0.1 });
 
   return (
-    <section ref={ref} className="py-32 px-4 bg-[#f4f4f4] dark:bg-white/10">
+    <section ref={ref} className="py-32 px-4 bg-[#f4f4f4] dark:bg-white">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={false}
@@ -225,7 +225,7 @@ function AppsSection({ locale, apps }: { locale: string; apps: App[] }) {
                   {/* Content */}
                   <div className="p-8">
                     <div className="flex items-center gap-3 mb-4">
-                      <div className="w-12 h-12 bg-[#f4f4f4] dark:bg-white/10 rounded-xl flex items-center justify-center">
+                      <div className="w-12 h-12 bg-[#f4f4f4] dark:bg-white rounded-xl flex items-center justify-center">
                         <app.icon className="text-foreground" size={24} />
                       </div>
                       <div>

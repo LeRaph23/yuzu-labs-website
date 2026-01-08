@@ -81,8 +81,8 @@ export default function AppMockup({
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-6 bg-[#231212] dark:bg-white rounded-b-2xl z-10" />
                 
                 {/* Capture d'écran */}
-                <div className="w-full h-full relative p-2">
-                  <div className="w-full h-full relative scale-90">
+                <div className="w-full h-full relative p-4">
+                  <div className="w-full h-full relative scale-75">
                     <Image
                       src={image}
                       alt={`${appName} screenshot ${index + 1}`}

@@ -91,7 +91,7 @@ export default function Testimonials({
             }}
             className="text-center mt-12"
           >
-            <div className="inline-flex items-center gap-2 bg-[#f4f4f4] dark:bg-white/10 px-6 py-3 rounded-full">
+            <div className="inline-flex items-center gap-2 bg-[#f4f4f4] dark:bg-white px-6 py-3 rounded-full">
               <span className="text-foreground/60 dark:text-foreground/70 text-sm font-medium">
                 {userCount} {userCount.includes('+') ? 'utilisateurs' : ''}
               </span>
@@ -118,7 +118,7 @@ function TestimonialCard({
   const rating = testimonial.rating || 5;
 
   // Fond alterné : blanc / gris clair
-  const bgColor = index % 2 === 0 ? 'bg-white dark:bg-[#231212]' : 'bg-[#f4f4f4] dark:bg-white/10';
+  const bgColor = index % 2 === 0 ? 'bg-white dark:bg-[#231212]' : 'bg-[#f4f4f4] dark:bg-white';
 
   return (
     <motion.div
@@ -151,7 +151,7 @@ function TestimonialCard({
             className={
               i < rating
                 ? 'fill-yellow-favorite text-yellow-favorite'
-                : 'fill-[#f4f4f4] dark:fill-white/20 text-[#f4f4f4] dark:text-white/20'
+                : 'fill-[#f4f4f4] dark:fill-white text-[#f4f4f4] dark:text-white'
             }
           />
         ))}
@@ -176,7 +176,7 @@ function TestimonialCard({
             className="rounded-full object-cover"
           />
         ) : (
-          <div className="w-11 h-11 bg-gradient-to-br from-[#231212]/20 to-[#231212]/40 dark:from-white/20 dark:to-white/40 rounded-full flex items-center justify-center text-foreground font-semibold text-sm">
+          <div className="w-11 h-11 bg-gradient-to-br from-[#231212]/20 to-[#231212]/40 dark:from-white dark:to-white rounded-full flex items-center justify-center text-foreground font-semibold text-sm">
             {testimonial.author.charAt(0).toUpperCase()}
           </div>
         )}

@@ -33,11 +33,11 @@ export default function Hero({
   const shouldReduceMotion = useReducedMotion();
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 bg-white dark:bg-[#231212]">
+    <section className="relative min-h-screen flex items-start justify-center overflow-hidden pt-20 bg-white dark:bg-[#231212]">
       {/* Formes organiques en arrière-plan (vagues CSS) */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-20 left-10 w-96 h-96 bg-[#e3e2f7]/20 dark:bg-white/5 rounded-full blur-3xl" />
-        <div className="absolute bottom-20 right-10 w-[500px] h-[500px] bg-[#f4f4f4]/30 dark:bg-white/5 rounded-full blur-3xl" />
+        <div className="absolute top-20 left-10 w-96 h-96 bg-[#e3e2f7]/20 dark:bg-[#231212] rounded-full blur-3xl" />
+        <div className="absolute bottom-20 right-10 w-[500px] h-[500px] bg-[#f4f4f4]/30 dark:bg-[#231212] rounded-full blur-3xl" />
         <svg
           className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full opacity-5"
           viewBox="0 0 1200 800"
@@ -52,8 +52,8 @@ export default function Hero({
         </svg>
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
           {/* Colonne gauche - Contenu texte */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -62,7 +62,7 @@ export default function Hero({
               duration: shouldReduceMotion ? 0.3 : 0.6,
               ease: [0.4, 0, 0.2, 1],
             }}
-            className="text-left"
+            className="text-left order-2 lg:order-1"
           >
             {/* Badge optionnel */}
             {badge && (
@@ -73,7 +73,7 @@ export default function Hero({
                   delay: shouldReduceMotion ? 0 : 0.15,
                   duration: 0.4,
                 }}
-                className="inline-flex items-center gap-2 bg-[#f4f4f4] dark:bg-white/10 border border-[#231212]/10 dark:border-white/10 px-4 py-1.5 rounded-full mb-8 shadow-subtle"
+                className="inline-flex items-center gap-2 bg-[#f4f4f4] dark:bg-white border border-[#231212]/10 dark:border-white/10 px-4 py-1.5 rounded-full mb-8 shadow-subtle"
               >
                 <Sparkles size={14} className="text-foreground" />
                 <span className="text-sm font-medium text-foreground">{badge}</span>
@@ -112,10 +112,10 @@ export default function Hero({
             {/* Badges App Store / Google Play (optionnel) */}
             {showAppStore && (
               <div className="flex gap-4">
-                <div className="w-32 h-10 bg-[#f4f4f4] dark:bg-white/10 rounded-lg flex items-center justify-center">
+                <div className="w-32 h-10 bg-[#f4f4f4] dark:bg-white rounded-lg flex items-center justify-center">
                   <span className="text-xs text-foreground/60">App Store</span>
                 </div>
-                <div className="w-32 h-10 bg-[#f4f4f4] dark:bg-white/10 rounded-lg flex items-center justify-center">
+                <div className="w-32 h-10 bg-[#f4f4f4] dark:bg-white rounded-lg flex items-center justify-center">
                   <span className="text-xs text-foreground/60">Google Play</span>
                 </div>
               </div>
@@ -130,7 +130,7 @@ export default function Hero({
               duration: shouldReduceMotion ? 0.3 : 0.6,
               delay: shouldReduceMotion ? 0 : 0.3,
             }}
-            className="relative flex items-center justify-center"
+            className="relative flex items-center justify-center order-1 lg:order-2"
           >
             <AppMockup
               images={mockupImages}

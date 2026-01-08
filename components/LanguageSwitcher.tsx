@@ -17,7 +17,7 @@ export default function LanguageSwitcher() {
   return (
     <div className="flex items-center gap-2">
       <Globe size={18} className="text-foreground/60 dark:text-foreground/70" />
-      <div className="flex items-center gap-1 bg-[#f4f4f4] dark:bg-white/10 rounded-full p-1">
+      <div className="flex items-center gap-1 bg-[#f4f4f4] dark:bg-white rounded-full p-1">
         <button
           onClick={() => switchLocale('fr')}
           className={`px-3 py-1 rounded-full text-sm font-medium transition-premium ${

@@ -46,7 +46,7 @@ export default function Newsletter({
   return (
     <section
       ref={ref}
-      className={`py-32 px-4 bg-[#e3e2f7] dark:bg-white/5 ${className}`}
+      className={`py-32 px-4 bg-[#e3e2f7] dark:bg-[#231212] ${className}`}
     >
       <div className="max-w-4xl mx-auto">
         <motion.div
