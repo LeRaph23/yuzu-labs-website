@@ -1,70 +1,79 @@
 'use client';
 
-import { useTranslations } from 'next-intl';
 import { motion, useReducedMotion } from 'framer-motion';
-import { 
-  Heart, 
-  Dumbbell, 
-  Target, 
-  Brain, 
-  TrendingUp, 
-  User 
-} from 'lucide-react';
+import { ArrowRight, LucideIcon } from 'lucide-react';
 import { useScrollAnimation } from '@/lib/hooks/useScrollAnimation';
+import Link from 'next/link';
 
-const features = [
-  { key: 'painRelief', icon: Heart, color: 'bg-red-light text-red-primary' },
-  { key: 'stretching', icon: Dumbbell, color: 'bg-green-pale text-green-primary' },
-  { key: 'splits', icon: Target, color: 'bg-orange-light text-orange-primary' },
-  { key: 'antiStress', icon: Brain, color: 'bg-blue-light text-blue-primary' },
-  { key: 'progress', icon: TrendingUp, color: 'bg-yellow-bubble text-yellow-favorite' },
-  { key: 'personalized', icon: User, color: 'bg-green-lighter text-green-primary' },
-];
+interface Feature {
+  icon: LucideIcon;
+  title: string;
+  description: string;
+  href?: string;
+  bgColor?: string; // Couleur de fond pastel optionnelle
+}
 
-export default function Features() {
-  const t = useTranslations('features');
+interface FeaturesProps {
+  title?: string;
+  subtitle?: string;
+  features: Feature[];
+  className?: string;
+}
+
+export default function Features({
+  title,
+  subtitle,
+  features,
+  className = '',
+}: FeaturesProps) {
   const shouldReduceMotion = useReducedMotion();
   const [sectionRef, sectionState] = useScrollAnimation({ threshold: 0.1 });
 
   return (
-    <section ref={sectionRef} id="features" className="py-32 px-4 bg-green-mint/20">
+    <section
+      ref={sectionRef}
+      id="features"
+      className={`py-32 px-4 bg-white dark:bg-dark ${className}`}
+    >
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
-        <motion.div
-          initial={false}
-          animate={{
-            opacity: sectionState.isVisible ? 1 : 0,
-            y: sectionState.isVisible ? 0 : 30,
-          }}
-          transition={{
-            duration: shouldReduceMotion ? 0.3 : 0.6,
-            ease: [0.4, 0, 0.2, 1],
-          }}
-          className="text-center mb-20"
-        >
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-6 tracking-tight">
-            {t('title')}
-          </h2>
-          <p className="text-lg text-foreground/60 max-w-2xl mx-auto">
-            {t('subtitle')}
-          </p>
-        </motion.div>
+        {(title || subtitle) && (
+          <motion.div
+            initial={false}
+            animate={{
+              opacity: sectionState.isVisible ? 1 : 0,
+              y: sectionState.isVisible ? 0 : 30,
+            }}
+            transition={{
+              duration: shouldReduceMotion ? 0.3 : 0.6,
+              ease: [0.4, 0, 0.2, 1],
+            }}
+            className="text-center mb-20"
+          >
+            {title && (
+              <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-6 tracking-tight uppercase">
+                {title}
+              </h2>
+            )}
+            {subtitle && (
+              <p className="text-lg text-foreground/60 dark:text-foreground/70 max-w-2xl mx-auto">
+                {subtitle}
+              </p>
+            )}
+          </motion.div>
+        )}
 
-        {/* Features Grid */}
+        {/* Features Grid - 3 colonnes desktop */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {features.map((feature, index) => {
-            const Icon = feature.icon;
-            return (
-              <FeatureCard
-                key={feature.key}
-                feature={feature}
-                index={index}
-                t={t}
-                shouldReduceMotion={shouldReduceMotion}
-                sectionVisible={sectionState.isVisible}
-              />
-            );
-          })}
+          {features.map((feature, index) => (
+            <FeatureCard
+              key={index}
+              feature={feature}
+              index={index}
+              shouldReduceMotion={shouldReduceMotion}
+              sectionVisible={sectionState.isVisible}
+            />
+          ))}
         </div>
       </div>
     </section>
@@ -74,13 +83,11 @@ export default function Features() {
 function FeatureCard({
   feature,
   index,
-  t,
   shouldReduceMotion,
   sectionVisible,
 }: {
-  feature: typeof features[0];
+  feature: Feature;
   index: number;
-  t: (key: string) => string;
   shouldReduceMotion: boolean | null;
   sectionVisible: boolean;
 }) {
@@ -102,18 +109,39 @@ function FeatureCard({
         ease: [0.4, 0, 0.2, 1],
       }}
       whileHover={shouldReduceMotion ? {} : { y: -4, scale: 1.02 }}
-      className="bg-white rounded-2xl p-8 shadow-card card-hover border border-gray-100/50"
+      className={`rounded-2xl p-8 shadow-card card-hover border border-dark/5 dark:border-white/10 ${
+        feature.bgColor || 'bg-gray-light dark:bg-gray-light/10'
+      }`}
     >
-      <div className={`w-14 h-14 ${feature.color} rounded-xl flex items-center justify-center mb-6`}>
-        <Icon size={28} />
+      {/* Icône outline */}
+      <div className="w-14 h-14 flex items-center justify-center mb-6">
+        <Icon
+          size={28}
+          className="text-foreground stroke-2"
+          strokeWidth={1.5}
+        />
       </div>
+
+      {/* Titre (Poppins SemiBold) */}
       <h3 className="text-xl font-semibold text-foreground mb-3">
-        {t(`${feature.key}.title`)}
+        {feature.title}
       </h3>
-      <p className="text-foreground/60 leading-relaxed text-sm">
-        {t(`${feature.key}.description`)}
+
+      {/* Description */}
+      <p className="text-foreground/60 dark:text-foreground/70 leading-relaxed text-sm mb-6">
+        {feature.description}
       </p>
+
+      {/* Bouton "En savoir plus" (fond noir, texte blanc) */}
+      {feature.href && (
+        <Link
+          href={feature.href}
+          className="inline-flex items-center gap-2 bg-dark dark:bg-white text-white dark:text-dark px-6 py-2.5 rounded-full font-semibold text-sm transition-premium hover:opacity-90"
+        >
+          En savoir plus
+          <ArrowRight size={16} />
+        </Link>
+      )}
     </motion.div>
   );
 }
-

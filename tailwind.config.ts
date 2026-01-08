@@ -6,11 +6,19 @@ const config: Config = {
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
+  darkMode: 'class',
   theme: {
     extend: {
       colors: {
-        background: '#FFF9E6',
-        foreground: '#212121',
+        // Design Dribbble colors
+        dark: '#231212', // Noir profond pour CTA et texte
+        'gray-light': '#f4f4f4', // Fond secondaire
+        'purple-pale': '#e3e2f7', // Fond accent newsletter
+        white: '#ffffff', // Fond principal
+        
+        // Couleurs existantes conservées pour compatibilité
+        background: '#ffffff', // Changé de #FFF9E6 à blanc
+        foreground: '#231212', // Changé pour correspondre au design
         green: {
           primary: '#406C55',
           light: '#548A74',
@@ -43,6 +51,7 @@ const config: Config = {
       },
       fontFamily: {
         poppins: ['Poppins', 'sans-serif'],
+        sans: ['Poppins', 'sans-serif'], // Poppins comme police par défaut
       },
       spacing: {
         // Système de spacing basé sur 4px

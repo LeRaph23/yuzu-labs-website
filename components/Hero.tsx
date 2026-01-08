@@ -1,141 +1,147 @@
 'use client';
 
-import { useTranslations } from 'next-intl';
-import { motion } from 'framer-motion';
+import { motion, useReducedMotion } from 'framer-motion';
 import { ArrowRight, Sparkles } from 'lucide-react';
-import Image from 'next/image';
+import Link from 'next/link';
+import AppMockup from './AppMockup';
 
-export default function Hero() {
-  const t = useTranslations('hero');
+interface HeroProps {
+  title: string; // Titre en majuscules
+  description: string;
+  ctaText: string;
+  ctaHref: string;
+  ctaSecondaryText?: string;
+  ctaSecondaryHref?: string;
+  mockupImages: string[]; // Array de screenshots pour le mockup
+  appName: string;
+  badge?: string;
+  showAppStore?: boolean; // Afficher badges App Store / Google Play
+}
+
+export default function Hero({
+  title,
+  description,
+  ctaText,
+  ctaHref,
+  ctaSecondaryText,
+  ctaSecondaryHref,
+  mockupImages,
+  appName,
+  badge,
+  showAppStore = false,
+}: HeroProps) {
+  const shouldReduceMotion = useReducedMotion();
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
-      {/* Background decorations */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-green-lighter/40 rounded-full blur-3xl" />
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-yellow-bubble/50 rounded-full blur-3xl" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-orange-light/20 rounded-full blur-3xl" />
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 bg-white dark:bg-dark">
+      {/* Formes organiques en arrière-plan (vagues CSS) */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-20 left-10 w-96 h-96 bg-purple-pale/20 dark:bg-purple-pale/10 rounded-full blur-3xl" />
+        <div className="absolute bottom-20 right-10 w-[500px] h-[500px] bg-gray-light/30 dark:bg-gray-light/10 rounded-full blur-3xl" />
+        <svg
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full opacity-5"
+          viewBox="0 0 1200 800"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M0,400 Q300,300 600,400 T1200,400 L1200,800 L0,800 Z"
+            fill="currentColor"
+            className="text-dark dark:text-white"
+          />
+        </svg>
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Text Content */}
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          {/* Colonne gauche - Contenu texte */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{
+              duration: shouldReduceMotion ? 0.3 : 0.6,
+              ease: [0.4, 0, 0.2, 1],
+            }}
             className="text-left"
           >
-            {/* Badge */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.2 }}
-              className="inline-flex items-center gap-2 bg-green-pale border border-green-lighter px-4 py-2 rounded-full mb-6"
-            >
-              <Sparkles size={16} className="text-green-primary" />
-              <span className="text-sm font-medium text-green-primary">
-                {t('badge')}
-              </span>
-            </motion.div>
+            {/* Badge optionnel */}
+            {badge && (
+              <motion.div
+                initial={{ opacity: 0, scale: 0.95 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{
+                  delay: shouldReduceMotion ? 0 : 0.15,
+                  duration: 0.4,
+                }}
+                className="inline-flex items-center gap-2 bg-gray-light dark:bg-gray-light/20 border border-dark/10 dark:border-white/10 px-4 py-1.5 rounded-full mb-8 shadow-subtle"
+              >
+                <Sparkles size={14} className="text-foreground" />
+                <span className="text-sm font-medium text-foreground">{badge}</span>
+              </motion.div>
+            )}
 
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
-              {t('title')}{' '}
-              <span className="bg-gradient-to-r from-green-primary to-green-light bg-clip-text text-transparent">
-                {t('titleHighlight')}
-              </span>
+            {/* Titre en majuscules (Poppins Bold) */}
+            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-foreground mb-8 leading-[1.1] tracking-tight uppercase">
+              {title}
             </h1>
 
-            <p className="text-lg text-foreground/70 mb-8 max-w-xl leading-relaxed">
-              {t('subtitle')}
+            {/* Description */}
+            <p className="text-lg sm:text-xl text-foreground/70 dark:text-foreground/80 mb-12 max-w-2xl leading-relaxed">
+              {description}
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4">
-              <motion.a
-                href="#features"
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                className="inline-flex items-center justify-center gap-2 bg-green-primary hover:bg-green-light text-white px-8 py-4 rounded-full font-semibold transition-all shadow-lg shadow-green-primary/25"
+            {/* CTA Principal */}
+            <div className="flex flex-col sm:flex-row gap-4 mb-8">
+              <Link
+                href={ctaHref}
+                className="inline-flex items-center justify-center gap-2 bg-dark dark:bg-white text-white dark:text-dark px-8 py-4 rounded-full font-semibold transition-premium hover:opacity-90 shadow-card"
               >
-                {t('cta')}
+                {ctaText}
                 <ArrowRight size={20} />
-              </motion.a>
-              <motion.a
-                href="#about"
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                className="inline-flex items-center justify-center gap-2 bg-white hover:bg-green-pale text-green-primary px-8 py-4 rounded-full font-semibold transition-all border-2 border-green-primary"
-              >
-                {t('ctaSecondary')}
-              </motion.a>
+              </Link>
+              {ctaSecondaryText && ctaSecondaryHref && (
+                <Link
+                  href={ctaSecondaryHref}
+                  className="inline-flex items-center justify-center gap-2 bg-white dark:bg-dark border-2 border-dark dark:border-white text-dark dark:text-white px-8 py-4 rounded-full font-semibold transition-premium hover:bg-gray-light dark:hover:bg-white/10"
+                >
+                  {ctaSecondaryText}
+                </Link>
+              )}
             </div>
+
+            {/* Badges App Store / Google Play (optionnel) */}
+            {showAppStore && (
+              <div className="flex gap-4">
+                <div className="w-32 h-10 bg-gray-light dark:bg-gray-light/20 rounded-lg flex items-center justify-center">
+                  <span className="text-xs text-foreground/60">App Store</span>
+                </div>
+                <div className="w-32 h-10 bg-gray-light dark:bg-gray-light/20 rounded-lg flex items-center justify-center">
+                  <span className="text-xs text-foreground/60">Google Play</span>
+                </div>
+              </div>
+            )}
           </motion.div>
 
-          {/* Mascot Illustration */}
+          {/* Colonne droite - Mockup */}
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
+            transition={{
+              duration: shouldReduceMotion ? 0.3 : 0.6,
+              delay: shouldReduceMotion ? 0 : 0.3,
+            }}
             className="relative flex items-center justify-center"
           >
-            <div className="relative">
-              {/* Main Yuzu mascot */}
-              <motion.div
-                animate={{ y: [0, -15, 0] }}
-                transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-                className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96"
-              >
-                <Image
-                  src="/images/yuzu-wave.webp"
-                  alt="Yuzu mascotte"
-                  fill
-                  className="object-contain drop-shadow-2xl"
-                  priority
-                />
-              </motion.div>
-
-              {/* Floating elements */}
-              <motion.div
-                animate={{ y: [0, -10, 0] }}
-                transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute -top-4 -right-4 w-16 h-16 bg-green-pale rounded-2xl flex items-center justify-center shadow-lg"
-              >
-                <span className="text-2xl">🧘</span>
-              </motion.div>
-              <motion.div
-                animate={{ y: [0, 10, 0] }}
-                transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
-                className="absolute -bottom-4 -left-4 w-14 h-14 bg-orange-light rounded-2xl flex items-center justify-center shadow-lg"
-              >
-                <span className="text-xl">💪</span>
-              </motion.div>
-              <motion.div
-                animate={{ y: [0, -8, 0] }}
-                transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-                className="absolute top-1/2 -right-8 w-12 h-12 bg-yellow-bubble rounded-2xl flex items-center justify-center shadow-lg"
-              >
-                <span className="text-lg">✨</span>
-              </motion.div>
-            </div>
+            <AppMockup
+              images={mockupImages}
+              appName={appName}
+              rotation={-8}
+              shadow={true}
+              className="w-full"
+            />
           </motion.div>
         </div>
       </div>
-
-      {/* Scroll indicator */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2"
-      >
-        <motion.div
-          animate={{ y: [0, 8, 0] }}
-          transition={{ duration: 1.5, repeat: Infinity }}
-          className="w-6 h-10 border-2 border-green-primary/50 rounded-full flex justify-center pt-2"
-        >
-          <div className="w-1.5 h-3 bg-green-primary rounded-full" />
-        </motion.div>
-      </motion.div>
     </section>
   );
 }

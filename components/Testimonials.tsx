@@ -1,73 +1,124 @@
 'use client';
 
-import { useTranslations } from 'next-intl';
 import { motion, useReducedMotion } from 'framer-motion';
 import { Star, Quote } from 'lucide-react';
+import Image from 'next/image';
 import { useScrollAnimation } from '@/lib/hooks/useScrollAnimation';
 
-const testimonials = ['testimonial1', 'testimonial2', 'testimonial3'];
+interface Testimonial {
+  text: string;
+  author: string;
+  role: string;
+  avatar?: string; // URL de l'avatar ou initiales
+  rating?: number; // Note sur 5 (défaut: 5)
+}
 
-export default function Testimonials() {
-  const t = useTranslations('testimonials');
+interface TestimonialsProps {
+  title?: string;
+  subtitle?: string;
+  testimonials: Testimonial[];
+  userCount?: string; // Ex: "+1K", "10K+", etc.
+  className?: string;
+}
+
+export default function Testimonials({
+  title,
+  subtitle,
+  testimonials,
+  userCount,
+  className = '',
+}: TestimonialsProps) {
   const shouldReduceMotion = useReducedMotion();
   const [sectionRef, sectionState] = useScrollAnimation({ threshold: 0.1 });
 
   return (
-    <section ref={sectionRef} className="py-32 px-4 bg-green-pale/30">
+    <section
+      ref={sectionRef}
+      className={`py-32 px-4 bg-white dark:bg-dark ${className}`}
+    >
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
-        <motion.div
-          initial={false}
-          animate={{
-            opacity: sectionState.isVisible ? 1 : 0,
-            y: sectionState.isVisible ? 0 : 30,
-          }}
-          transition={{
-            duration: shouldReduceMotion ? 0.3 : 0.6,
-            ease: [0.4, 0, 0.2, 1],
-          }}
-          className="text-center mb-20"
-        >
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-6 tracking-tight">
-            {t('title')}
-          </h2>
-          <p className="text-lg text-foreground/60 max-w-2xl mx-auto">
-            {t('subtitle')}
-          </p>
-        </motion.div>
+        {(title || subtitle) && (
+          <motion.div
+            initial={false}
+            animate={{
+              opacity: sectionState.isVisible ? 1 : 0,
+              y: sectionState.isVisible ? 0 : 30,
+            }}
+            transition={{
+              duration: shouldReduceMotion ? 0.3 : 0.6,
+              ease: [0.4, 0, 0.2, 1],
+            }}
+            className="text-center mb-20"
+          >
+            {title && (
+              <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-6 tracking-tight uppercase">
+                {title}
+              </h2>
+            )}
+            {subtitle && (
+              <p className="text-lg text-foreground/60 dark:text-foreground/70 max-w-2xl mx-auto">
+                {subtitle}
+              </p>
+            )}
+          </motion.div>
+        )}
 
-        {/* Testimonials Grid */}
-        <div className="grid md:grid-cols-3 gap-6">
-          {testimonials.map((key, index) => (
+        {/* Layout 2 colonnes possible ou grille */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {testimonials.map((testimonial, index) => (
             <TestimonialCard
-              key={key}
-              testimonialKey={key}
+              key={index}
+              testimonial={testimonial}
               index={index}
-              t={t}
               shouldReduceMotion={shouldReduceMotion}
               sectionVisible={sectionState.isVisible}
             />
           ))}
         </div>
+
+        {/* Indicateur nombre d'utilisateurs (optionnel) */}
+        {userCount && (
+          <motion.div
+            initial={false}
+            animate={{
+              opacity: sectionState.isVisible ? 1 : 0,
+              y: sectionState.isVisible ? 0 : 20,
+            }}
+            transition={{
+              duration: shouldReduceMotion ? 0.3 : 0.6,
+              delay: shouldReduceMotion ? 0 : 0.3,
+            }}
+            className="text-center mt-12"
+          >
+            <div className="inline-flex items-center gap-2 bg-gray-light dark:bg-gray-light/20 px-6 py-3 rounded-full">
+              <span className="text-foreground/60 dark:text-foreground/70 text-sm font-medium">
+                {userCount} {userCount.includes('+') ? 'utilisateurs' : ''}
+              </span>
+            </div>
+          </motion.div>
+        )}
       </div>
     </section>
   );
 }
 
 function TestimonialCard({
-  testimonialKey,
+  testimonial,
   index,
-  t,
   shouldReduceMotion,
   sectionVisible,
 }: {
-  testimonialKey: string;
+  testimonial: Testimonial;
   index: number;
-  t: (key: string) => string;
   shouldReduceMotion: boolean | null;
   sectionVisible: boolean;
 }) {
   const [ref, state] = useScrollAnimation({ threshold: 0.15 });
+  const rating = testimonial.rating || 5;
+
+  // Fond alterné : blanc / gris clair
+  const bgColor = index % 2 === 0 ? 'bg-white dark:bg-dark' : 'bg-gray-light dark:bg-gray-light/10';
 
   return (
     <motion.div
@@ -84,11 +135,11 @@ function TestimonialCard({
         ease: [0.4, 0, 0.2, 1],
       }}
       whileHover={shouldReduceMotion ? {} : { y: -4 }}
-      className="bg-white rounded-2xl p-8 shadow-card card-hover border border-gray-100/50 relative"
+      className={`${bgColor} rounded-2xl p-8 shadow-card card-hover border border-dark/5 dark:border-white/10 relative`}
     >
-      {/* Quote Icon */}
-      <div className="absolute -top-4 -left-4 w-10 h-10 bg-green-primary rounded-full flex items-center justify-center shadow-card">
-        <Quote size={18} className="text-white" />
+      {/* Quote Icon stylisé */}
+      <div className="absolute -top-4 -left-4 w-10 h-10 bg-dark dark:bg-white rounded-full flex items-center justify-center shadow-card">
+        <Quote size={18} className="text-white dark:text-dark" />
       </div>
 
       {/* Stars */}
@@ -97,31 +148,47 @@ function TestimonialCard({
           <Star
             key={i}
             size={16}
-            className="fill-yellow-favorite text-yellow-favorite"
+            className={
+              i < rating
+                ? 'fill-yellow-favorite text-yellow-favorite'
+                : 'fill-gray-light dark:fill-gray-light/20 text-gray-light dark:text-gray-light/20'
+            }
           />
         ))}
       </div>
 
-      {/* Quote Text */}
-      <p className="text-foreground/70 leading-relaxed mb-8 text-sm italic">
-        &ldquo;{t(`${testimonialKey}.text`)}&rdquo;
+      {/* Citation avec guillemets stylisés */}
+      <p className="text-foreground/70 dark:text-foreground/80 leading-relaxed mb-8 text-sm italic relative pl-4">
+        <span className="absolute left-0 top-0 text-4xl text-foreground/20 dark:text-foreground/30 font-serif leading-none">
+          &ldquo;
+        </span>
+        {testimonial.text}
       </p>
 
-      {/* Author */}
+      {/* Author avec avatar */}
       <div className="flex items-center gap-3">
-        <div className="w-11 h-11 bg-gradient-to-br from-green-light to-green-primary rounded-full flex items-center justify-center text-white font-semibold text-sm">
-          {t(`${testimonialKey}.author`).charAt(0)}
-        </div>
+        {testimonial.avatar ? (
+          <Image
+            src={testimonial.avatar}
+            alt={testimonial.author}
+            width={44}
+            height={44}
+            className="rounded-full object-cover"
+          />
+        ) : (
+          <div className="w-11 h-11 bg-gradient-to-br from-dark/20 to-dark/40 dark:from-white/20 dark:to-white/40 rounded-full flex items-center justify-center text-foreground font-semibold text-sm">
+            {testimonial.author.charAt(0).toUpperCase()}
+          </div>
+        )}
         <div>
           <div className="font-semibold text-foreground text-sm">
-            {t(`${testimonialKey}.author`)}
+            {testimonial.author}
           </div>
-          <div className="text-xs text-foreground/50">
-            {t(`${testimonialKey}.role`)}
+          <div className="text-xs text-foreground/50 dark:text-foreground/60">
+            {testimonial.role}
           </div>
         </div>
       </div>
     </motion.div>
   );
 }
-

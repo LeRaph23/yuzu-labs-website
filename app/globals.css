@@ -5,8 +5,15 @@
 @tailwind utilities;
 
 :root {
-  --background: #FFF9E6;
-  --foreground: #212121;
+  /* Design Dribbble - Mode Clair */
+  --background: #ffffff;
+  --foreground: #231212;
+  --dark: #231212;
+  --gray-light: #f4f4f4;
+  --purple-pale: #e3e2f7;
+  --white: #ffffff;
+  
+  /* Couleurs existantes conservées */
   --green-primary: #406C55;
   --green-light: #548A74;
   --green-lighter: #D2EBD3;
@@ -28,6 +35,16 @@
   --duration-normal: 0.3s;
   --duration-slow: 0.4s;
   --duration-reveal: 0.6s;
+}
+
+.dark {
+  /* Design Dribbble - Mode Sombre (inversé) */
+  --background: #231212;
+  --foreground: #ffffff;
+  --dark: #ffffff;
+  --gray-light: #2a1f1f;
+  --purple-pale: #3d3550;
+  --white: #231212;
 }
 
 * {
@@ -63,6 +80,18 @@ body {
   color: var(--foreground);
   line-height: 1.6;
   overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Styles pour titres en majuscules (Poppins Bold) */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+}
+
+h1.uppercase, h2.uppercase, h3.uppercase {
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
 }
 
 @layer utilities {
@@ -136,4 +165,3 @@ section[id] {
     -webkit-overflow-scrolling: touch;
   }
 }
-

@@ -1,7 +1,13 @@
 export const colors = {
-  background: '#FFF9E6',
-  foreground: '#212121',
-  white: '#FFFFFF',
+  // Design Dribbble colors
+  dark: '#231212', // Noir profond pour CTA et texte
+  grayLight: '#f4f4f4', // Fond secondaire
+  purplePale: '#e3e2f7', // Fond accent newsletter
+  white: '#ffffff', // Fond principal
+  
+  // Couleurs existantes
+  background: '#ffffff', // Changé de #FFF9E6 à blanc
+  foreground: '#231212', // Changé pour correspondre au design
   green: {
     primary: '#406C55',
     light: '#548A74',
@@ -87,5 +93,42 @@ export const durations = {
   normal: '300ms',
   slow: '400ms',
   reveal: '600ms',
+} as const;
+
+// Design Dribbble - Mode Sombre (inversé)
+export const darkModeColors = {
+  background: '#231212',
+  foreground: '#ffffff',
+  dark: '#ffffff',
+  grayLight: '#2a1f1f',
+  purplePale: '#3d3550',
+  white: '#231212',
+} as const;
+
+// CTA Colors - Mode Clair
+export const ctaColors = {
+  light: {
+    primary: {
+      bg: '#231212',
+      text: '#ffffff',
+    },
+    secondary: {
+      bg: '#ffffff',
+      text: '#231212',
+      border: '#231212',
+    },
+  },
+  // CTA Colors - Mode Sombre (inversé)
+  dark: {
+    primary: {
+      bg: '#ffffff',
+      text: '#231212',
+    },
+    secondary: {
+      bg: '#231212',
+      text: '#ffffff',
+      border: '#ffffff',
+    },
+  },
 } as const;
 
