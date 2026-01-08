@@ -33,11 +33,11 @@ export default function Hero({
   const shouldReduceMotion = useReducedMotion();
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 bg-white dark:bg-dark">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 bg-white dark:bg-[#231212]">
       {/* Formes organiques en arrière-plan (vagues CSS) */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-20 left-10 w-96 h-96 bg-purple-pale/20 dark:bg-purple-pale/10 rounded-full blur-3xl" />
-        <div className="absolute bottom-20 right-10 w-[500px] h-[500px] bg-gray-light/30 dark:bg-gray-light/10 rounded-full blur-3xl" />
+        <div className="absolute top-20 left-10 w-96 h-96 bg-[#e3e2f7]/20 dark:bg-white/5 rounded-full blur-3xl" />
+        <div className="absolute bottom-20 right-10 w-[500px] h-[500px] bg-[#f4f4f4]/30 dark:bg-white/5 rounded-full blur-3xl" />
         <svg
           className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full opacity-5"
           viewBox="0 0 1200 800"
@@ -47,7 +47,7 @@ export default function Hero({
           <path
             d="M0,400 Q300,300 600,400 T1200,400 L1200,800 L0,800 Z"
             fill="currentColor"
-            className="text-dark dark:text-white"
+            className="text-[#231212] dark:text-white"
           />
         </svg>
       </div>
@@ -73,7 +73,7 @@ export default function Hero({
                   delay: shouldReduceMotion ? 0 : 0.15,
                   duration: 0.4,
                 }}
-                className="inline-flex items-center gap-2 bg-gray-light dark:bg-gray-light/20 border border-dark/10 dark:border-white/10 px-4 py-1.5 rounded-full mb-8 shadow-subtle"
+                className="inline-flex items-center gap-2 bg-[#f4f4f4] dark:bg-white/10 border border-[#231212]/10 dark:border-white/10 px-4 py-1.5 rounded-full mb-8 shadow-subtle"
               >
                 <Sparkles size={14} className="text-foreground" />
                 <span className="text-sm font-medium text-foreground">{badge}</span>
@@ -94,7 +94,7 @@ export default function Hero({
             <div className="flex flex-col sm:flex-row gap-4 mb-8">
               <Link
                 href={ctaHref}
-                className="inline-flex items-center justify-center gap-2 bg-dark dark:bg-white text-white dark:text-dark px-8 py-4 rounded-full font-semibold transition-premium hover:opacity-90 shadow-card"
+                className="inline-flex items-center justify-center gap-2 bg-[#231212] dark:bg-white text-white dark:text-[#231212] px-8 py-4 rounded-full font-semibold transition-premium hover:opacity-90 shadow-card"
               >
                 {ctaText}
                 <ArrowRight size={20} />
@@ -102,7 +102,7 @@ export default function Hero({
               {ctaSecondaryText && ctaSecondaryHref && (
                 <Link
                   href={ctaSecondaryHref}
-                  className="inline-flex items-center justify-center gap-2 bg-white dark:bg-dark border-2 border-dark dark:border-white text-dark dark:text-white px-8 py-4 rounded-full font-semibold transition-premium hover:bg-gray-light dark:hover:bg-white/10"
+                  className="inline-flex items-center justify-center gap-2 bg-white dark:bg-[#231212] border-2 border-[#231212] dark:border-white text-[#231212] dark:text-white px-8 py-4 rounded-full font-semibold transition-premium hover:opacity-80"
                 >
                   {ctaSecondaryText}
                 </Link>
@@ -112,10 +112,10 @@ export default function Hero({
             {/* Badges App Store / Google Play (optionnel) */}
             {showAppStore && (
               <div className="flex gap-4">
-                <div className="w-32 h-10 bg-gray-light dark:bg-gray-light/20 rounded-lg flex items-center justify-center">
+                <div className="w-32 h-10 bg-[#f4f4f4] dark:bg-white/10 rounded-lg flex items-center justify-center">
                   <span className="text-xs text-foreground/60">App Store</span>
                 </div>
-                <div className="w-32 h-10 bg-gray-light dark:bg-gray-light/20 rounded-lg flex items-center justify-center">
+                <div className="w-32 h-10 bg-[#f4f4f4] dark:bg-white/10 rounded-lg flex items-center justify-center">
                   <span className="text-xs text-foreground/60">Google Play</span>
                 </div>
               </div>

@@ -34,7 +34,7 @@ export default function Testimonials({
   return (
     <section
       ref={sectionRef}
-      className={`py-32 px-4 bg-white dark:bg-dark ${className}`}
+      className={`py-32 px-4 bg-white dark:bg-[#231212] ${className}`}
     >
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
@@ -91,7 +91,7 @@ export default function Testimonials({
             }}
             className="text-center mt-12"
           >
-            <div className="inline-flex items-center gap-2 bg-gray-light dark:bg-gray-light/20 px-6 py-3 rounded-full">
+            <div className="inline-flex items-center gap-2 bg-[#f4f4f4] dark:bg-white/10 px-6 py-3 rounded-full">
               <span className="text-foreground/60 dark:text-foreground/70 text-sm font-medium">
                 {userCount} {userCount.includes('+') ? 'utilisateurs' : ''}
               </span>
@@ -118,7 +118,7 @@ function TestimonialCard({
   const rating = testimonial.rating || 5;
 
   // Fond alterné : blanc / gris clair
-  const bgColor = index % 2 === 0 ? 'bg-white dark:bg-dark' : 'bg-gray-light dark:bg-gray-light/10';
+  const bgColor = index % 2 === 0 ? 'bg-white dark:bg-[#231212]' : 'bg-[#f4f4f4] dark:bg-white/10';
 
   return (
     <motion.div
@@ -135,11 +135,11 @@ function TestimonialCard({
         ease: [0.4, 0, 0.2, 1],
       }}
       whileHover={shouldReduceMotion ? {} : { y: -4 }}
-      className={`${bgColor} rounded-2xl p-8 shadow-card card-hover border border-dark/5 dark:border-white/10 relative`}
+      className={`${bgColor} rounded-2xl p-8 shadow-card card-hover border border-[#231212]/5 dark:border-white/10 relative`}
     >
       {/* Quote Icon stylisé */}
-      <div className="absolute -top-4 -left-4 w-10 h-10 bg-dark dark:bg-white rounded-full flex items-center justify-center shadow-card">
-        <Quote size={18} className="text-white dark:text-dark" />
+      <div className="absolute -top-4 -left-4 w-10 h-10 bg-[#231212] dark:bg-white rounded-full flex items-center justify-center shadow-card">
+        <Quote size={18} className="text-white dark:text-[#231212]" />
       </div>
 
       {/* Stars */}
@@ -151,7 +151,7 @@ function TestimonialCard({
             className={
               i < rating
                 ? 'fill-yellow-favorite text-yellow-favorite'
-                : 'fill-gray-light dark:fill-gray-light/20 text-gray-light dark:text-gray-light/20'
+                : 'fill-[#f4f4f4] dark:fill-white/20 text-[#f4f4f4] dark:text-white/20'
             }
           />
         ))}
@@ -176,7 +176,7 @@ function TestimonialCard({
             className="rounded-full object-cover"
           />
         ) : (
-          <div className="w-11 h-11 bg-gradient-to-br from-dark/20 to-dark/40 dark:from-white/20 dark:to-white/40 rounded-full flex items-center justify-center text-foreground font-semibold text-sm">
+          <div className="w-11 h-11 bg-gradient-to-br from-[#231212]/20 to-[#231212]/40 dark:from-white/20 dark:to-white/40 rounded-full flex items-center justify-center text-foreground font-semibold text-sm">
             {testimonial.author.charAt(0).toUpperCase()}
           </div>
         )}

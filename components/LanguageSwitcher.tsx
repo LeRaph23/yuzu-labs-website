@@ -17,12 +17,12 @@ export default function LanguageSwitcher() {
   return (
     <div className="flex items-center gap-2">
       <Globe size={18} className="text-foreground/60 dark:text-foreground/70" />
-      <div className="flex items-center gap-1 bg-gray-light dark:bg-gray-light/20 rounded-full p-1">
+      <div className="flex items-center gap-1 bg-[#f4f4f4] dark:bg-white/10 rounded-full p-1">
         <button
           onClick={() => switchLocale('fr')}
           className={`px-3 py-1 rounded-full text-sm font-medium transition-premium ${
             locale === 'fr'
-              ? 'bg-dark dark:bg-white text-white dark:text-dark'
+              ? 'bg-[#231212] dark:bg-white text-white dark:text-[#231212]'
               : 'text-foreground/70 dark:text-foreground/70 hover:text-foreground'
           }`}
         >
@@ -32,7 +32,7 @@ export default function LanguageSwitcher() {
           onClick={() => switchLocale('en')}
           className={`px-3 py-1 rounded-full text-sm font-medium transition-premium ${
             locale === 'en'
-              ? 'bg-dark dark:bg-white text-white dark:text-dark'
+              ? 'bg-[#231212] dark:bg-white text-white dark:text-[#231212]'
               : 'text-foreground/70 dark:text-foreground/70 hover:text-foreground'
           }`}
         >

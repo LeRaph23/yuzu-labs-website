@@ -26,8 +26,8 @@ export default function Header() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-premium ${
         scrolled
-          ? 'bg-white/98 dark:bg-dark/98 backdrop-blur-md border-b border-dark/10 dark:border-white/10 shadow-subtle'
-          : 'bg-white/95 dark:bg-dark/95 backdrop-blur-sm border-b border-dark/10 dark:border-white/10'
+          ? 'bg-white dark:bg-[#231212] backdrop-blur-md border-b border-[#231212]/10 dark:border-white/10 shadow-subtle'
+          : 'bg-white dark:bg-[#231212] backdrop-blur-sm border-b border-[#231212]/10 dark:border-white/10'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -71,7 +71,7 @@ export default function Header() {
             <ThemeToggle />
             <Link
               href="#contact"
-              className="px-6 py-2.5 bg-white dark:bg-dark border-2 border-dark dark:border-white text-dark dark:text-white rounded-full font-semibold text-sm hover:bg-gray-light dark:hover:bg-white/10 transition-premium"
+              className="px-6 py-2.5 bg-white dark:bg-[#231212] border-2 border-[#231212] dark:border-white text-[#231212] dark:text-white rounded-full font-semibold text-sm hover:opacity-80 transition-premium"
             >
               {locale === 'fr' ? 'Télécharger' : 'Download'}
             </Link>
@@ -93,7 +93,7 @@ export default function Header() {
             isMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
           }`}
         >
-          <div className="py-4 border-t border-dark/10 dark:border-white/10">
+          <div className="py-4 border-t border-[#231212]/10 dark:border-white/10">
             <nav className="flex flex-col gap-2">
               <Link
                 href={`/${locale}/yuzu`}
@@ -117,7 +117,7 @@ export default function Header() {
                 {locale === 'fr' ? 'Légal' : 'Legal'}
               </Link>
               
-              <div className="border-t border-dark/10 dark:border-white/10 my-2" />
+              <div className="border-t border-[#231212]/10 dark:border-white/10 my-2" />
               
               <div className="flex items-center justify-between px-4 py-2">
                 <LanguageSwitcher />
@@ -127,7 +127,7 @@ export default function Header() {
               <Link
                 href="#contact"
                 onClick={() => setIsMenuOpen(false)}
-                className="mx-4 mt-2 px-6 py-2.5 bg-dark dark:bg-white text-white dark:text-dark rounded-full font-semibold text-sm text-center hover:opacity-90 transition-premium"
+                className="mx-4 mt-2 px-6 py-2.5 bg-[#231212] dark:bg-white text-white dark:text-[#231212] rounded-full font-semibold text-sm text-center hover:opacity-90 transition-premium"
               >
                 {locale === 'fr' ? 'Télécharger' : 'Download'}
               </Link>

@@ -23,7 +23,7 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-white dark:bg-dark border-t border-dark/10 dark:border-white/10">
+    <footer className="bg-white dark:bg-[#231212] border-t border-[#231212]/10 dark:border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           {/* Company Info */}
@@ -125,7 +125,7 @@ export default function Footer() {
         </div>
 
         {/* Legal Links */}
-        <div className="mt-12 pt-8 border-t border-dark/10 dark:border-white/10">
+        <div className="mt-12 pt-8 border-t border-[#231212]/10 dark:border-white/10">
           <div className="flex flex-wrap gap-6 justify-center text-sm text-foreground/50 dark:text-foreground/60 mb-6">
             <Link
               href={`/${locale}/legal`}

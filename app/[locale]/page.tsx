@@ -53,11 +53,11 @@ export default function HomePage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 bg-white dark:bg-dark">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 bg-white dark:bg-[#231212]">
         {/* Formes organiques en arrière-plan */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-20 left-10 w-96 h-96 bg-purple-pale/20 dark:bg-purple-pale/10 rounded-full blur-3xl" />
-          <div className="absolute bottom-20 right-10 w-[500px] h-[500px] bg-gray-light/30 dark:bg-gray-light/10 rounded-full blur-3xl" />
+          <div className="absolute top-20 left-10 w-96 h-96 bg-[#e3e2f7]/20 dark:bg-white/5 rounded-full blur-3xl" />
+          <div className="absolute bottom-20 right-10 w-[500px] h-[500px] bg-[#f4f4f4]/30 dark:bg-white/5 rounded-full blur-3xl" />
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
@@ -78,7 +78,7 @@ export default function HomePage() {
                 delay: shouldReduceMotion ? 0 : 0.15,
                 duration: 0.4,
               }}
-              className="inline-flex items-center gap-2 bg-gray-light dark:bg-gray-light/20 border border-dark/10 dark:border-white/10 px-4 py-1.5 rounded-full mb-8 shadow-subtle"
+              className="inline-flex items-center gap-2 bg-[#f4f4f4] dark:bg-white/10 border border-[#231212]/10 dark:border-white/10 px-4 py-1.5 rounded-full mb-8 shadow-subtle"
             >
               <Sparkles size={14} className="text-foreground" />
               <span className="text-sm font-medium text-foreground">
@@ -101,14 +101,14 @@ export default function HomePage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href={`/${locale}/yuzu`}
-                className="inline-flex items-center justify-center gap-2 bg-dark dark:bg-white text-white dark:text-dark px-8 py-4 rounded-full font-semibold transition-premium hover:opacity-90 shadow-card"
+                className="inline-flex items-center justify-center gap-2 bg-[#231212] dark:bg-white text-white dark:text-[#231212] px-8 py-4 rounded-full font-semibold transition-premium hover:opacity-90 shadow-card"
               >
                 {locale === 'fr' ? 'Découvrir Yuzu' : 'Discover Yuzu'}
                 <ArrowRight size={20} />
               </Link>
               <Link
                 href={`/${locale}/motus`}
-                className="inline-flex items-center justify-center gap-2 bg-dark dark:bg-white text-white dark:text-dark px-8 py-4 rounded-full font-semibold transition-premium hover:opacity-90 shadow-card"
+                className="inline-flex items-center justify-center gap-2 bg-[#231212] dark:bg-white text-white dark:text-[#231212] px-8 py-4 rounded-full font-semibold transition-premium hover:opacity-90 shadow-card"
               >
                 {locale === 'fr' ? 'Découvrir Motus' : 'Discover Motus'}
                 <ArrowRight size={20} />
@@ -169,7 +169,7 @@ function AppsSection({ locale, apps }: { locale: string; apps: App[] }) {
   const [ref, scrollState] = useScrollAnimation({ threshold: 0.1 });
 
   return (
-    <section ref={ref} className="py-32 px-4 bg-gray-light dark:bg-gray-light/10">
+    <section ref={ref} className="py-32 px-4 bg-[#f4f4f4] dark:bg-white/10">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={false}
@@ -211,7 +211,7 @@ function AppsSection({ locale, apps }: { locale: string; apps: App[] }) {
               whileHover={shouldReduceMotion ? {} : { y: -4 }}
             >
               <Link href={app.href} className="block group">
-                <div className="bg-white dark:bg-dark rounded-2xl overflow-hidden shadow-card card-hover border border-dark/5 dark:border-white/10">
+                <div className="bg-white dark:bg-[#231212] rounded-2xl overflow-hidden shadow-card card-hover border border-[#231212]/5 dark:border-white/10">
                   {/* Image */}
                   <div className="relative w-full h-64 overflow-hidden">
                     <Image
@@ -225,7 +225,7 @@ function AppsSection({ locale, apps }: { locale: string; apps: App[] }) {
                   {/* Content */}
                   <div className="p-8">
                     <div className="flex items-center gap-3 mb-4">
-                      <div className="w-12 h-12 bg-gray-light dark:bg-gray-light/20 rounded-xl flex items-center justify-center">
+                      <div className="w-12 h-12 bg-[#f4f4f4] dark:bg-white/10 rounded-xl flex items-center justify-center">
                         <app.icon className="text-foreground" size={24} />
                       </div>
                       <div>
@@ -241,7 +241,7 @@ function AppsSection({ locale, apps }: { locale: string; apps: App[] }) {
                     </p>
 
                     {/* CTA */}
-                    <div className="inline-flex items-center gap-2 bg-dark dark:bg-white text-white dark:text-dark px-6 py-2.5 rounded-full font-semibold text-sm transition-premium hover:opacity-90 group-hover:gap-3">
+                    <div className="inline-flex items-center gap-2 bg-[#231212] dark:bg-white text-white dark:text-[#231212] px-6 py-2.5 rounded-full font-semibold text-sm transition-premium hover:opacity-90 group-hover:gap-3">
                       {locale === 'fr' ? 'Explorer' : 'Explore'}
                       <ArrowRight size={16} />
                     </div>
@@ -261,7 +261,7 @@ function StatsSection({ locale }: { locale: string }) {
   const [ref, scrollState] = useScrollAnimation({ threshold: 0.2 });
 
   return (
-    <section ref={ref} className="py-32 px-4 bg-white dark:bg-dark">
+    <section ref={ref} className="py-32 px-4 bg-white dark:bg-[#231212]">
       <div className="max-w-4xl mx-auto">
         <motion.div
           initial={false}

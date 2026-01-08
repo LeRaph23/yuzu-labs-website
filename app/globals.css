@@ -5,13 +5,9 @@
 @tailwind utilities;
 
 :root {
-  /* Design Dribbble - Mode Clair */
+  /* Mode Clair - Simple noir et blanc */
   --background: #ffffff;
   --foreground: #231212;
-  --dark: #231212;
-  --gray-light: #f4f4f4;
-  --purple-pale: #e3e2f7;
-  --white: #ffffff;
   
   /* Couleurs existantes conservées */
   --green-primary: #406C55;
@@ -38,13 +34,9 @@
 }
 
 .dark {
-  /* Design Dribbble - Mode Sombre (inversé) */
+  /* Mode Sombre - Simple inversion noir et blanc */
   --background: #231212;
   --foreground: #ffffff;
-  --dark: #ffffff;
-  --gray-light: #2a1f1f;
-  --purple-pale: #3d3550;
-  --white: #231212;
 }
 
 * {

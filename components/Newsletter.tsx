@@ -46,7 +46,7 @@ export default function Newsletter({
   return (
     <section
       ref={ref}
-      className={`py-32 px-4 bg-purple-pale dark:bg-purple-pale/20 ${className}`}
+      className={`py-32 px-4 bg-[#e3e2f7] dark:bg-white/5 ${className}`}
     >
       <div className="max-w-4xl mx-auto">
         <motion.div
@@ -84,13 +84,13 @@ export default function Newsletter({
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder={placeholder || 'Votre email'}
                 required
-                className="flex-1 px-6 py-4 bg-white dark:bg-dark border-2 border-dark/10 dark:border-white/10 rounded-full text-foreground placeholder:text-foreground/40 focus:outline-none focus:border-dark dark:focus:border-white transition-premium"
+                className="flex-1 px-6 py-4 bg-white dark:bg-[#231212] border-2 border-[#231212]/10 dark:border-white/10 rounded-full text-foreground placeholder:text-foreground/40 focus:outline-none focus:border-[#231212] dark:focus:border-white transition-premium"
                 disabled={isLoading || isSubmitted}
               />
               <button
                 type="submit"
                 disabled={isLoading || isSubmitted || !email}
-                className="px-8 py-4 bg-dark dark:bg-white text-white dark:text-dark rounded-full font-semibold transition-premium hover:opacity-90 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 whitespace-nowrap"
+                className="px-8 py-4 bg-[#231212] dark:bg-white text-white dark:text-[#231212] rounded-full font-semibold transition-premium hover:opacity-90 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 whitespace-nowrap"
               >
                 {isSubmitted ? (
                   <>

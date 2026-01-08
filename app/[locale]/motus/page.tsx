@@ -1,5 +1,6 @@
-import { setRequestLocale } from 'next-intl/server';
-import { locales } from '@/lib/i18n';
+'use client';
+
+import { useLocale } from 'next-intl';
 import Hero from '@/components/Hero';
 import Features from '@/components/Features';
 import Testimonials from '@/components/Testimonials';
@@ -8,16 +9,10 @@ import { Activity, Users, Heart, Target, Clock, Zap } from 'lucide-react';
 
 export const runtime = 'edge';
 
-type Props = {
-  params: { locale: string };
-};
 
-export function generateStaticParams() {
-  return locales.map((locale) => ({ locale }));
-}
 
-export default function MotusPage({ params: { locale } }: Props) {
-  setRequestLocale(locale);
+export default function MotusPage() {
+  const locale = useLocale();
 
   // Mockup images - À remplacer par les screenshots réels fournis par l'utilisateur
   const mockupImages = [
@@ -135,7 +130,7 @@ export default function MotusPage({ params: { locale } }: Props) {
       />
 
       {/* Section Statistiques */}
-      <section className="py-24 bg-gray-light dark:bg-gray-light/10">
+      <section className="py-24 bg-[#f4f4f4] dark:bg-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid sm:grid-cols-3 gap-12 text-center">
             <div>

@@ -33,7 +33,7 @@ export default function Features({
     <section
       ref={sectionRef}
       id="features"
-      className={`py-32 px-4 bg-white dark:bg-dark ${className}`}
+      className={`py-32 px-4 bg-white dark:bg-[#231212] ${className}`}
     >
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
@@ -109,8 +109,8 @@ function FeatureCard({
         ease: [0.4, 0, 0.2, 1],
       }}
       whileHover={shouldReduceMotion ? {} : { y: -4, scale: 1.02 }}
-      className={`rounded-2xl p-8 shadow-card card-hover border border-dark/5 dark:border-white/10 ${
-        feature.bgColor || 'bg-gray-light dark:bg-gray-light/10'
+      className={`rounded-2xl p-8 shadow-card card-hover border border-[#231212]/5 dark:border-white/10 ${
+        feature.bgColor || 'bg-[#f4f4f4] dark:bg-white/10'
       }`}
     >
       {/* Icône outline */}
@@ -136,7 +136,7 @@ function FeatureCard({
       {feature.href && (
         <Link
           href={feature.href}
-          className="inline-flex items-center gap-2 bg-dark dark:bg-white text-white dark:text-dark px-6 py-2.5 rounded-full font-semibold text-sm transition-premium hover:opacity-90"
+          className="inline-flex items-center gap-2 bg-[#231212] dark:bg-white text-white dark:text-[#231212] px-6 py-2.5 rounded-full font-semibold text-sm transition-premium hover:opacity-90"
         >
           En savoir plus
           <ArrowRight size={16} />
