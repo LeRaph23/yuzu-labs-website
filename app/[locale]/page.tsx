@@ -1,10 +1,8 @@
 import { setRequestLocale } from 'next-intl/server';
 import { locales } from '@/lib/i18n';
 import Hero from '@/components/Hero';
-import PainPoints from '@/components/PainPoints';
-import HowItWorks from '@/components/HowItWorks';
-import Features from '@/components/Features';
-import Mascot from '@/components/Mascot';
+import AppShowcase from '@/components/AppShowcase';
+import Reviews from '@/components/Reviews';
 import AppStoreCTA from '@/components/AppStoreCTA';
 
 export const runtime = 'edge';
@@ -23,12 +21,9 @@ export default function HomePage({ params: { locale } }: Props) {
   return (
     <>
       <Hero />
-      <PainPoints />
-      <HowItWorks />
-      <Features />
-      <Mascot />
+      <AppShowcase />
+      <Reviews />
       <AppStoreCTA />
     </>
   );
 }
-

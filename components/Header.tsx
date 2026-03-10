@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useTranslations, useLocale } from 'next-intl';
@@ -13,25 +13,34 @@ export default function Header() {
   const t = useTranslations('header');
   const locale = useLocale();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 20);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
 
   const navLinks = [
-    { href: '#pain-points', label: t('painPoints') },
-    { href: '#how-it-works', label: t('howItWorks') },
     { href: '#features', label: t('features') },
-    { href: '#about', label: t('about') },
+    { href: '#reviews', label: t('reviews') },
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-green-lighter/50">
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        scrolled ? 'bg-background/95 backdrop-blur-md shadow-subtle' : 'bg-transparent'
+      }`}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
-          <Link href={`/${locale}`} className="flex items-center gap-2">
+          <Link href={`/${locale}`} className="flex items-center">
             <Image
               src="/images/logo_yuzu_labs.png"
-              alt="Yuzu Labs - App d'étirements pour douleurs de bureau"
-              width={150}
-              height={40}
-              className="h-10 w-auto"
+              alt="Yuzu Labs - App d'étirements personnalisés"
+              width={130}
+              height={36}
+              className="h-9 w-auto"
             />
           </Link>
 
@@ -40,7 +49,7 @@ export default function Header() {
               <a
                 key={link.href}
                 href={link.href}
-                className="text-foreground/70 hover:text-green-primary transition-colors font-medium"
+                className="text-foreground/60 hover:text-foreground transition-colors text-sm font-medium"
               >
                 {link.label}
               </a>
@@ -53,7 +62,7 @@ export default function Header() {
               href={APP_STORE_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-green-primary hover:bg-green-light text-white px-6 py-2.5 rounded-full font-medium transition-all hover:shadow-lg"
+              className="bg-foreground hover:bg-foreground/85 text-white px-5 py-2.5 rounded-full text-sm font-medium transition-all"
             >
               {t('download')}
             </a>
@@ -64,31 +73,31 @@ export default function Header() {
             className="md:hidden p-2 text-foreground"
             aria-label="Toggle menu"
           >
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            {isMenuOpen ? <X size={22} /> : <Menu size={22} />}
           </button>
         </div>
 
         {isMenuOpen && (
-          <div className="md:hidden py-4 border-t border-green-lighter/50">
-            <nav className="flex flex-col gap-4">
+          <div className="md:hidden py-4 border-t border-foreground/10">
+            <nav className="flex flex-col gap-3">
               {navLinks.map((link) => (
                 <a
                   key={link.href}
                   href={link.href}
                   onClick={() => setIsMenuOpen(false)}
-                  className="text-foreground/70 hover:text-green-primary transition-colors font-medium py-2"
+                  className="text-foreground/60 hover:text-foreground transition-colors font-medium py-2"
                 >
                   {link.label}
                 </a>
               ))}
-              <div className="flex items-center justify-between pt-4 border-t border-green-lighter/50">
+              <div className="flex items-center justify-between pt-4 border-t border-foreground/10">
                 <LanguageSwitcher />
                 <a
                   href={APP_STORE_URL}
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() => setIsMenuOpen(false)}
-                  className="bg-green-primary hover:bg-green-light text-white px-6 py-2.5 rounded-full font-medium transition-all"
+                  className="bg-foreground text-white px-5 py-2.5 rounded-full text-sm font-medium"
                 >
                   {t('download')}
                 </a>

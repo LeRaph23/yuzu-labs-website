@@ -4,87 +4,62 @@
     "description": "Yuzu is the personalized stretching app to relieve pain from sitting at a desk all day. 5-minute routines, no equipment needed, guided by a fun mascot. Available on the App Store."
   },
   "header": {
-    "painPoints": "The Problem",
-    "howItWorks": "How It Works",
-    "features": "Benefits",
-    "about": "Yuzu",
+    "features": "Features",
+    "reviews": "Reviews",
     "download": "Download"
   },
   "hero": {
-    "title": "Back pain from your desk?",
-    "titleHighlight": "5 minutes to change everything.",
-    "subtitle": "Yuzu offers ultra-quick, personalized stretching routines to relieve pain from sitting all day. No equipment, no gym clothes, right from your desk.",
-    "cta": "Download on the App Store",
-    "ctaSecondary": "See how it works"
+    "title": "Your desk pain,",
+    "titleHighlight": "gone.",
+    "subtitle": "5-minute stretching routines, personalized to your pain zone. No equipment, guided by your favorite mascot.",
+    "cta": "Download for free"
   },
-  "painPoints": {
-    "title": "8 hours sitting takes its toll",
-    "subtitle": "Desk work and remote work force you into prolonged postures that create chronic pain. Sound familiar?",
-    "neck": {
-      "title": "Stiff neck",
-      "description": "Cervical tension from staring at a screen all day long."
-    },
-    "back": {
-      "title": "Back pain",
-      "description": "Lower back pain that builds up after hours of sitting without moving."
-    },
-    "shoulders": {
-      "title": "Tense shoulders",
-      "description": "Stiffness and knots in your shoulders from poor posture."
-    },
-    "transition": "The good news? Just 5 minutes a day can change everything."
-  },
-  "howItWorks": {
-    "title": "How it works",
-    "subtitle": "3 simple steps to regain your mobility",
-    "step1": {
+  "showcase": {
+    "title": "Stretching made simple. Try it for yourself.",
+    "feature1": {
       "title": "Pick your pain zone",
-      "description": "Neck, back, shoulders… Tell Yuzu where it hurts, it handles the rest."
+      "description": "Neck, back, shoulders, legs… Tell Yuzu where it hurts. It builds a session 100% tailored to your needs."
     },
-    "step2": {
-      "title": "Follow your 5-min routine",
-      "description": "Step-by-step stretches guided by your favorite mascot. Doable at your desk, in pajamas, anywhere."
+    "feature2": {
+      "title": "Follow guided routines",
+      "description": "Step-by-step illustrated exercises with a built-in timer. Every movement is explained simply so you can follow along without thinking."
     },
-    "step3": {
-      "title": "Regain your mobility",
-      "description": "End your day pain-free and gain flexibility day after day."
+    "feature3": {
+      "title": "Celebrate your progress",
+      "description": "Yuzu cheers you on after every session. Track your streak and stay motivated with your lemon companion."
     }
   },
-  "features": {
-    "title": "Why Yuzu is different",
-    "subtitle": "An app built for people who don't have time (or desire) to hit the gym",
-    "quick": {
-      "title": "5 minutes flat",
-      "description": "Ultra-quick routines that fit into any schedule. No need to block an hour."
+  "reviews": {
+    "title": "What our users are saying",
+    "review1": {
+      "text": "Since using Yuzu, my back pain after work has almost disappeared. 5 minutes a day was all it took.",
+      "author": "Claire M."
     },
-    "noEquipment": {
-      "title": "Zero equipment needed",
-      "description": "Doable at your desk, at home, in pajamas. No gym clothes required."
+    "review2": {
+      "text": "The mascot is adorable and the exercises are really easy to follow. I recommend it to all my remote-working colleagues.",
+      "author": "Thomas R."
     },
-    "personalized": {
-      "title": "100% personalized",
-      "description": "Select your pain zone and get a session tailored to your specific needs."
+    "review3": {
+      "text": "Finally a stretching app that doesn't require 30 minutes and equipment. I use it at my desk between meetings.",
+      "author": "Sophie L."
     },
-    "fun": {
-      "title": "Guided by Yuzu",
-      "description": "An energetic lemon mascot that motivates you without pressure. Goodbye guilt."
+    "review4": {
+      "text": "My neck was killing me every evening. After 2 weeks with Yuzu, it's a whole different world. Thank you!",
+      "author": "Antoine D."
+    },
+    "review5": {
+      "text": "Love the concept. The little lemon cheering you on is way better than austere fitness apps. I actually feel motivated.",
+      "author": "Julie P."
+    },
+    "review6": {
+      "text": "Simple, effective, quick. Exactly what I needed for my tense shoulders after hours of coding.",
+      "author": "Marc B."
     }
-  },
-  "mascot": {
-    "title": "Meet Yuzu",
-    "subtitle": "Your pocket wellness coach",
-    "description": "Yuzu is an energetic little lemon that guides you through every stretch. Always encouraging, never guilt-tripping. It walks you through each movement so you can regain your mobility at your own pace.",
-    "bubble1": "Quick 5-min stretch?",
-    "bubble2": "Bye bye back pain!",
-    "bubble3": "You're crushing it!"
   },
   "appStoreCta": {
-    "title": "Ready to say goodbye to desk pain?",
-    "subtitle": "Download Yuzu for free and start your first 5-minute routine right now.",
-    "cta": "Download on the App Store",
-    "benefit1": "Free",
-    "benefit2": "No equipment",
-    "benefit3": "5 min / day"
+    "title": "Try it for free, right now.",
+    "subtitle": "Download Yuzu and start your first 5-minute routine.",
+    "cta": "Download on the App Store"
   },
   "footer": {
     "description": "Yuzu is the personalized stretching app to relieve pain from desk work. Made in France by Yuzu Labs.",

@@ -95,6 +95,12 @@ function StructuredData({ locale }: { locale: string }) {
           priceCurrency: 'EUR',
         },
         installUrl: 'https://apps.apple.com/app/yuzu-move-pain-free/id6756885861',
+        aggregateRating: {
+          '@type': 'AggregateRating',
+          ratingValue: '4.8',
+          ratingCount: '50',
+          bestRating: '5',
+        },
         author: {
           '@type': 'Organization',
           name: 'Yuzu Labs',
@@ -143,19 +149,18 @@ export default async function LocaleLayout({ children, params: { locale } }: Pro
   }
 
   setRequestLocale(locale);
-
   const messages = await getMessages();
 
   return (
     <html lang={locale} suppressHydrationWarning>
       <head>
-        <meta name="theme-color" content="#406C55" />
+        <meta name="theme-color" content="#FFF9E6" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <StructuredData locale={locale} />
       </head>
-      <body className="font-poppins antialiased">
+      <body className="font-poppins antialiased bg-background text-foreground">
         <NextIntlClientProvider messages={messages}>
           <Header />
           <main>{children}</main>
