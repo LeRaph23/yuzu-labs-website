@@ -1,97 +1,98 @@
 {
   "metadata": {
-    "title": "Yuzu Labs - Application de Fitness et Bien-être",
-    "description": "Yuzu est ton coach bien-être personnel. Étirements, soulagement des douleurs, objectif grand écart et exercices anti-stress."
+    "title": "Yuzu – Soulage tes douleurs de bureau en 5 min | Étirements personnalisés",
+    "description": "Yuzu est l'app d'étirements personnalisés pour soulager les douleurs liées au travail assis et au télétravail. Routines de 5 min, sans matériel, guidées par une mascotte fun. Disponible sur l'App Store."
   },
   "header": {
-    "features": "Fonctionnalités",
-    "about": "À propos",
-    "contact": "Contact",
+    "painPoints": "Le problème",
+    "howItWorks": "Comment ça marche",
+    "features": "Avantages",
+    "about": "Yuzu",
     "download": "Télécharger"
   },
   "hero": {
-    "badge": "Bientôt disponible",
-    "title": "Yuzu, ton coach",
-    "titleHighlight": "bien-être",
-    "subtitle": "Étirements guidés, soulagement des douleurs et exercices anti-stress. Atteins tes objectifs de flexibilité avec ton compagnon citron préféré.",
-    "cta": "Découvrir l'app",
-    "ctaSecondary": "En savoir plus"
+    "title": "Mal au dos à cause du bureau ?",
+    "titleHighlight": "5 minutes pour tout changer.",
+    "subtitle": "Yuzu te propose des routines d'étirements ultra-rapides et personnalisées pour soulager les douleurs liées au travail assis. Sans matériel, sans tenue de sport, directement depuis ton bureau.",
+    "cta": "Télécharger sur l'App Store",
+    "ctaSecondary": "Voir comment ça marche"
+  },
+  "painPoints": {
+    "title": "8h assis, ça laisse des traces",
+    "subtitle": "Le travail de bureau et le télétravail imposent une posture prolongée qui génère des douleurs chroniques. Tu te reconnais ?",
+    "neck": {
+      "title": "Nuque raide",
+      "description": "Tensions cervicales à force de fixer un écran toute la journée."
+    },
+    "back": {
+      "title": "Mal de dos",
+      "description": "Douleurs lombaires qui s'installent après des heures assis sans bouger."
+    },
+    "shoulders": {
+      "title": "Épaules tendues",
+      "description": "Contractures et raideurs dans les épaules à cause d'une mauvaise posture."
+    },
+    "transition": "La bonne nouvelle ? Il suffit de 5 minutes par jour pour tout changer."
+  },
+  "howItWorks": {
+    "title": "Comment ça marche",
+    "subtitle": "3 étapes simples pour retrouver ta mobilité",
+    "step1": {
+      "title": "Choisis ta zone de douleur",
+      "description": "Nuque, dos, épaules… Dis à Yuzu où tu as mal, il s'occupe du reste."
+    },
+    "step2": {
+      "title": "Suis ta routine de 5 min",
+      "description": "Des étirements guidés pas à pas par ta mascotte préférée. Faisable au bureau, en pyjama, n'importe où."
+    },
+    "step3": {
+      "title": "Retrouve ta mobilité",
+      "description": "Finis la journée sans douleur et gagne en souplesse jour après jour."
+    }
   },
   "features": {
-    "title": "Tout ce dont tu as besoin",
-    "subtitle": "Des fonctionnalités pensées pour ton bien-être quotidien",
-    "painRelief": {
-      "title": "Soulagement des douleurs",
-      "description": "Des exercices ciblés pour soulager les tensions du dos, de la nuque et des articulations."
+    "title": "Pourquoi Yuzu est différent",
+    "subtitle": "Une app pensée pour les gens qui n'ont pas le temps (ni l'envie) d'aller à la salle",
+    "quick": {
+      "title": "5 minutes chrono",
+      "description": "Des routines ultra-rapides qui s'intègrent dans n'importe quelle journée. Pas besoin de bloquer 1h."
     },
-    "stretching": {
-      "title": "Programmes d'étirements",
-      "description": "Des séances structurées pour améliorer ta souplesse au quotidien."
-    },
-    "splits": {
-      "title": "Objectif Grand Écart",
-      "description": "Un programme progressif pour atteindre le grand écart en toute sécurité."
-    },
-    "antiStress": {
-      "title": "Exercices Anti-Stress",
-      "description": "Des techniques de respiration et de relaxation pour apaiser ton esprit."
-    },
-    "progress": {
-      "title": "Suivi de Progression",
-      "description": "Visualise tes progrès et reste motivé grâce à des statistiques détaillées."
+    "noEquipment": {
+      "title": "Zéro matériel requis",
+      "description": "Faisable au bureau, chez toi, en pyjama. Aucune tenue de sport nécessaire."
     },
     "personalized": {
-      "title": "Programmes Personnalisés",
-      "description": "Des recommandations adaptées à ton niveau et tes objectifs."
+      "title": "100% personnalisé",
+      "description": "Sélectionne ta zone de douleur et obtiens une séance adaptée à tes besoins spécifiques."
+    },
+    "fun": {
+      "title": "Guidé par Yuzu",
+      "description": "Une mascotte citron pleine d'énergie qui te motive sans pression. Adieu la culpabilité."
     }
   },
   "mascot": {
     "title": "Rencontre Yuzu",
-    "subtitle": "Ton compagnon bien-être",
-    "description": "Yuzu est un petit citron plein d'énergie qui t'accompagne dans tous tes exercices. Toujours encourageant, jamais acide !",
-    "bubble1": "Tu vas y arriver !",
-    "bubble2": "Encore un petit effort !",
-    "bubble3": "Bravo, c'est super !"
+    "subtitle": "Ton coach bien-être de poche",
+    "description": "Yuzu est un petit citron plein d'énergie qui t'accompagne dans chaque étirement. Toujours encourageant, jamais culpabilisant. Il te guide mouvement par mouvement pour que tu retrouves ta mobilité en douceur.",
+    "bubble1": "On s'étire 5 min ?",
+    "bubble2": "Bye bye mal de dos !",
+    "bubble3": "T'es au top !"
   },
-  "testimonials": {
-    "title": "Ce qu'ils en disent",
-    "subtitle": "Des utilisateurs conquis par Yuzu",
-    "testimonial1": {
-      "text": "Grâce à Yuzu, j'ai enfin réussi à faire le grand écart ! Le programme est progressif et très bien expliqué.",
-      "author": "Marie L.",
-      "role": "Utilisatrice depuis 6 mois"
-    },
-    "testimonial2": {
-      "text": "Mes douleurs de dos ont considérablement diminué. Les exercices sont parfaitement adaptés à mon rythme.",
-      "author": "Thomas D.",
-      "role": "Utilisateur depuis 3 mois"
-    },
-    "testimonial3": {
-      "text": "La mascotte Yuzu me motive chaque jour ! Une app simple mais terriblement efficace.",
-      "author": "Sophie M.",
-      "role": "Utilisatrice depuis 1 an"
-    }
-  },
-  "contact": {
-    "title": "Contacte-nous",
-    "subtitle": "Une question ? N'hésite pas à nous écrire",
-    "name": "Ton nom",
-    "email": "Ton email",
-    "message": "Ton message",
-    "send": "Envoyer",
-    "success": "Message envoyé avec succès !",
-    "error": "Une erreur est survenue. Réessaie plus tard.",
-    "emailDirect": "Ou écris-nous directement à"
+  "appStoreCta": {
+    "title": "Prêt à dire adieu aux douleurs de bureau ?",
+    "subtitle": "Télécharge Yuzu gratuitement et commence ta première routine de 5 minutes dès maintenant.",
+    "cta": "Télécharger sur l'App Store",
+    "benefit1": "Gratuit",
+    "benefit2": "Sans matériel",
+    "benefit3": "5 min / jour"
   },
   "footer": {
-    "description": "Yuzu Labs développe des applications de bien-être innovantes pour améliorer ta qualité de vie au quotidien.",
+    "description": "Yuzu est l'application d'étirements personnalisés pour soulager les douleurs liées au travail assis. Développée en France par Yuzu Labs.",
     "legal": "Mentions légales",
     "privacy": "Politique de confidentialité",
     "terms": "Conditions d'utilisation",
     "rights": "Tous droits réservés",
-    "company": "Yuzu Labs SAS",
-    "address": "11 rue de Lorraine, 68490 PETIT-LANDAU, France",
-    "siren": "SIREN : 994879013"
+    "company": "Yuzu Labs SAS"
   },
   "legal": {
     "title": "Mentions légales",
@@ -147,7 +148,7 @@
     "intro": "Les présentes conditions générales d'utilisation régissent l'accès et l'utilisation de l'application Yuzu et du site web yuzulabs.app.",
     "object": {
       "title": "Objet du service",
-      "content": "Yuzu est une application de fitness et de bien-être proposant des programmes d'étirements, des exercices de soulagement des douleurs et des techniques anti-stress."
+      "content": "Yuzu est une application de bien-être proposant des routines d'étirements personnalisées pour soulager les douleurs liées au travail assis et au télétravail."
     },
     "access": {
       "title": "Accès au service",

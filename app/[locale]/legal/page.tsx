@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { locales } from '@/lib/i18n';
 
@@ -5,6 +6,10 @@ export const runtime = 'edge';
 
 type Props = {
   params: { locale: string };
+};
+
+export const metadata: Metadata = {
+  robots: { index: false, follow: true },
 };
 
 export function generateStaticParams() {

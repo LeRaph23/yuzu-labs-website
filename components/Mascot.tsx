@@ -8,10 +8,9 @@ export default function Mascot() {
   const t = useTranslations('mascot');
 
   return (
-    <section id="about" className="py-24 px-4 bg-background overflow-hidden">
+    <section id="about" className="py-24 px-4 bg-green-mint/30 overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Mascot Illustration */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -20,7 +19,6 @@ export default function Mascot() {
             className="relative flex items-center justify-center order-2 lg:order-1"
           >
             <div className="relative">
-              {/* Main mascot image */}
               <motion.div
                 animate={{ y: [0, -10, 0] }}
                 transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
@@ -28,14 +26,12 @@ export default function Mascot() {
               >
                 <Image
                   src="/images/yuzu-wave.webp"
-                  alt="Yuzu mascotte"
+                  alt="Yuzu, mascotte citron coach d'étirements pour soulager les douleurs de bureau"
                   fill
                   className="object-contain drop-shadow-2xl"
-                  priority
                 />
               </motion.div>
 
-              {/* Speech Bubbles */}
               <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
@@ -68,7 +64,6 @@ export default function Mascot() {
             </div>
           </motion.div>
 
-          {/* Text Content */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -86,25 +81,19 @@ export default function Mascot() {
               {t('description')}
             </p>
 
-            {/* Stats */}
-            <div className="grid grid-cols-3 gap-4">
-              <div className="text-center p-4 bg-green-pale rounded-xl">
-                <div className="text-2xl font-bold text-green-primary">300+</div>
-                <div className="text-sm text-foreground/60">Exercices</div>
-              </div>
-              <div className="text-center p-4 bg-orange-light/50 rounded-xl">
-                <div className="text-2xl font-bold text-orange-primary">0</div>
-                <div className="text-sm text-foreground/60">Obligation</div>
-              </div>
-              <div className="text-center p-4 bg-yellow-bubble rounded-xl">
-                <div className="text-2xl font-bold text-yellow-favorite">24/7</div>
-                <div className="text-sm text-foreground/60">Disponible</div>
-              </div>
+            <div className="flex flex-wrap gap-3">
+              {['🎯 Personnalisé', '⏱️ 5 min', '🧘 Guidé', '😊 Fun'].map((tag) => (
+                <span
+                  key={tag}
+                  className="inline-flex items-center px-4 py-2 bg-white rounded-full text-sm font-medium text-foreground/80 shadow-sm"
+                >
+                  {tag}
+                </span>
+              ))}
             </div>
           </motion.div>
         </div>
 
-        {/* Additional mascot poses */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -118,7 +107,7 @@ export default function Mascot() {
           >
             <Image
               src="/images/yuzu-splits.webp"
-              alt="Yuzu fait le grand écart"
+              alt="Yuzu mascotte en position d'étirement"
               fill
               className="object-contain drop-shadow-lg"
             />
@@ -129,7 +118,7 @@ export default function Mascot() {
           >
             <Image
               src="/images/yuzu-wave.webp"
-              alt="Yuzu dit bonjour"
+              alt="Yuzu mascotte qui salue"
               fill
               className="object-contain drop-shadow-lg"
             />
@@ -140,7 +129,7 @@ export default function Mascot() {
           >
             <Image
               src="/images/yuzu-strong.webp"
-              alt="Yuzu montre ses muscles"
+              alt="Yuzu mascotte motivante montre sa force"
               fill
               className="object-contain drop-shadow-lg"
             />
