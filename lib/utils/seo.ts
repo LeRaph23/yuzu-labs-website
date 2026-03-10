@@ -6,7 +6,7 @@ const BASE_URL = 'https://yuzulabs.app';
 
 /**
  * Construit l'URL canonique pour une page donnée
- * @param path - Le chemin de la page (ex: '/', '/yuzu', '/motus/privacy')
+ * @param path - Le chemin de la page (ex: '/', '/legal', '/privacy')
  * @param locale - La locale (ex: 'fr', 'en')
  * @returns L'URL canonique complète
  */
@@ -19,7 +19,7 @@ export function getCanonicalUrl(path: string, locale: string): string {
 
 /**
  * Construit les URLs alternatives pour toutes les locales
- * @param path - Le chemin de la page (ex: '/', '/yuzu', '/motus/privacy')
+ * @param path - Le chemin de la page (ex: '/', '/legal', '/privacy')
  * @param locales - Les locales disponibles (ex: ['fr', 'en'])
  * @returns Un objet avec les URLs pour chaque locale
  */
