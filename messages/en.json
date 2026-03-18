@@ -92,58 +92,96 @@
   },
   "privacy": {
     "title": "Privacy Policy",
-    "intro": "Yuzu Labs is committed to protecting the privacy of users of its application and website. This privacy policy explains how we collect, use and protect your personal data.",
-    "collection": {
-      "title": "Data Collected",
-      "content": "We collect the following data: account information (email, name), application usage data, user preferences, and exercise progress data."
+    "intro": "Welcome to Yuzu!\n\nYour privacy is extremely important to us. This Privacy Policy clearly and transparently explains what data we collect, why we collect it, how we use it, and what your rights are.\n\nBy using the App, you agree to the practices described in this Privacy Policy.",
+    "lastUpdated": "Last updated: November 21, 2025",
+    "section1": {
+      "title": "1. FUNDAMENTAL PRINCIPLES",
+      "content": "We commit to respecting the following principles:\n\n✓ Transparency: Clearly informing you about our practices\n✓ Minimization: Collecting only strictly necessary data\n✓ Security: Protecting your data with best practices\n✓ Control: Giving you control over your data\n✓ Compliance: Respecting GDPR and applicable laws"
     },
-    "usage": {
-      "title": "Data Usage",
-      "content": "Your data is used to: personalize your experience, improve our services, send you notifications about your progress, and provide customer support."
+    "section2": {
+      "title": "2. DATA COLLECTED",
+      "content": "2.1 Data You Provide to Us\n\nPROFILE DATA\n• First name (required)\n• Age (optional)\n• Gender (optional)\n\nPREFERENCES AND GOALS DATA\n• Main goal (flexibility, pain relief, posture, mobility, stress)\n• Targeted body areas (full body, neck, back, shoulders, legs, feet)\n• Specific flexibility goals\n• Professional context (office, standing, physical, mixed, flexible)\n• Fitness level (beginner, intermediate, advanced)\n• Preferred time for exercises\n• Reminder time (optional)\n\nACTIVITY DATA\n• Session history (date, duration, type, difficulty)\n• Completed exercises with dates\n• Favorite exercises\n• Custom sessions created\n• Progress metrics (streaks, total exercises, total time)\n\n2.2 Automatically Collected Data\n\nTECHNICAL DATA\n• Device identifier\n• Device model and system version\n• App version\n• Device language\n• Push notification token (if enabled)\n• Time zone\n\nUSAGE DATA\n• Usage dates and times\n• Features used\n• Errors and crashes (anonymized data)\n\n2.3 Data We DO NOT Collect\n\n✗ Last name\n✗ Full postal address\n✗ Phone number\n✗ Banking information\n✗ Precise GPS location\n✗ Contacts\n✗ Personal photos or videos\n✗ Sensitive health data (medical diagnoses, treatments)\n✗ Biometric data"
     },
-    "cookies": {
-      "title": "Cookies",
-      "content": "Our website uses essential cookies for the service to function and analytical cookies to improve the user experience. You can disable cookies in your browser settings."
+    "section3": {
+      "title": "3. USE OF DATA",
+      "content": "We use your data to:\n\n• Provide App services (Legal basis: Contract)\n• Personalize your experience (Legal basis: Contract)\n• Generate tailored programs (Legal basis: Contract)\n• Save your progress (Legal basis: Contract)\n• Sync across multiple devices (Legal basis: Contract)\n• Send reminder notifications (Legal basis: Consent)\n• Improve the App (Legal basis: Legitimate interest)\n• Ensure security (Legal basis: Legitimate interest)\n• Customer support (Legal basis: Legitimate interest)\n\nYou can withdraw your consent at any time for processing that depends on it."
     },
-    "rights": {
-      "title": "Your Rights (GDPR)",
-      "content": "In accordance with the GDPR, you have the right to access, rectify, delete and port your data. To exercise these rights, contact us at yuzu.contactme@gmail.com."
+    "section4": {
+      "title": "4. DATA RETENTION",
+      "content": "• Profile data and preferences: As long as your account is active\n• Session history: As long as your account is active\n• Favorite exercises: As long as your account is active\n• Custom sessions: As long as your account is active\n• Technical data and logs: 12 months maximum\n• Customer support data: 3 years after ticket closure\n\nAFTER ACCOUNT DELETION:\nAll your personal data is deleted within 30 days maximum."
     },
-    "retention": {
-      "title": "Data Retention",
-      "content": "Your data is kept for the duration of your use of the service and up to 3 years after your last activity, unless otherwise required by law."
+    "section5": {
+      "title": "5. DATA SHARING AND TRANSFER",
+      "content": "We NEVER sell your personal data.\n\nTECHNICAL SERVICE PROVIDERS\n\nSupabase (Hosting and Database)\n• Service: Supabase Inc.\n• Location: Servers located in the European Union\n• Role: Secure hosting, authentication, synchronization\n• Protection: TLS and AES-256 encryption, SOC 2 Type II compliance\n\nNotification Services (Apple/Google)\n• Apple Push Notification Service (APNs) for iOS\n• Firebase Cloud Messaging (FCM) for Android\n• Shared data: Only notification token and message content\n• Control: Can be disabled at any time in settings\n\nEU HOSTING\nYour data is hosted exclusively in the European Union, ensuring the highest level of GDPR protection."
     },
-    "contact": {
-      "title": "DPO Contact",
-      "content": "For any questions regarding the protection of your data, you can contact our Data Protection Officer at: yuzu.contactme@gmail.com"
+    "section6": {
+      "title": "6. DATA SECURITY",
+      "content": "6.1 Technical Measures\n\n✓ Encryption in transit: TLS 1.3 for all communications\n✓ Encryption at rest: AES-256 for stored data\n✓ Secure authentication: Session management with JWT tokens\n✓ Data isolation: Row Level Security (RLS) - each user only sees their own data\n✓ Regular backups: Automatic daily backups\n✓ Monitoring: 24/7 system monitoring\n\n6.2 Organizational Measures\n\n✓ Access restricted to authorized personnel only\n✓ Principle of least privilege\n✓ Regular security audits\n✓ Team training on data protection\n\n6.3 In Case of Data Breach\n\nWe commit to:\n• Notify the supervisory authority (CNIL) within 72 hours\n• Inform you without delay if the risk is high\n• Take all necessary measures to limit the impact"
+    },
+    "section7": {
+      "title": "7. YOUR DATA RIGHTS (GDPR)",
+      "content": "7.1 Right of Access\nYou can request a copy of all your data. How? Settings > My data or contact us\n\n7.2 Right of Rectification\nYou can correct inaccurate data. How? Modify directly in settings\n\n7.3 Right to Erasure\nYou can request deletion of your data. How? Settings > Delete my data\n\n7.4 Right to Portability\nYou can receive your data in structured format (JSON, CSV). How? Settings > Export my data\n\n7.5 Right to Object\nYou can object to the processing of your data. How? Disable the relevant options in settings\n\n7.6 Right to Withdraw Consent\nFor notifications, you can withdraw your consent at any time. How? Disable in Settings > Notifications\n\n7.7 Right to Lodge a Complaint\n\nIf you believe your rights are not being respected:\n\nCNIL (Commission Nationale de l'Informatique et des Libertés)\n3 Place de Fontenoy\nTSA 80715\n75334 PARIS CEDEX 07\nPhone: 01 53 73 22 22\nWebsite: https://www.cnil.fr/\n\nRESPONSE TIME\nWe commit to responding to your requests within one month maximum."
+    },
+    "section8": {
+      "title": "8. CHILDREN'S DATA",
+      "content": "The App is accessible to individuals aged 13 and over.\n\nFor users under 18, we strongly recommend obtaining parental consent.\n\nIf we discover that a child under 13 has provided personal data, we will immediately delete that data."
+    },
+    "section9": {
+      "title": "9. COOKIES AND SIMILAR TECHNOLOGIES",
+      "content": "The App does not use cookies in the traditional sense.\n\nLOCAL STORAGE\nThe App stores certain data locally on your device to:\n• Improve performance\n• Allow offline use\n• Save your preferences\n\nThis data remains on your device and is deleted if you uninstall the App."
+    },
+    "section10": {
+      "title": "10. CHANGES TO THIS POLICY",
+      "content": "We may update this Privacy Policy to reflect changes in our practices or legislation.\n\nIn case of significant changes:\n• We will notify you via the App\n• We will update the date at the top of this policy\n• Your continued use constitutes acceptance of the new terms"
+    },
+    "section11": {
+      "title": "11. CONTACT",
+      "content": "For any questions regarding this Privacy Policy or to exercise your rights:\n\nEmail: yuzu.contactme@gmail.com\n\nWe commit to responding to your requests as quickly as possible.\n\nYUZU'S COMMITMENTS\n\nRespect your privacy\nBe transparent about our practices\nGive you control over your data\nProtect your data with the best security measures\nNever sell your data to third parties\nRespond quickly to your requests\n\nBy using the Yuzu App, you acknowledge that you have read, understood, and accepted this Privacy Policy.\n\nVersion 1.0 - November 2025 — Compliant with GDPR (EU 2016/679) and Apple App Store requirements"
     }
   },
   "terms": {
-    "title": "Terms of Use",
-    "intro": "These terms of use govern access to and use of the Yuzu application and the yuzulabs.app website.",
-    "object": {
-      "title": "Purpose of the Service",
-      "content": "Yuzu is a wellness application offering personalized stretching routines to relieve pain from desk work and remote work."
+    "title": "Terms of Service",
+    "intro": "Welcome to Yuzu, a mobile application for personalized mobility and stretching exercises.\n\nThese Terms of Service (\"Terms\") govern access to and use of the Yuzu mobile application (\"the App\") and related services (\"the Services\").\n\nBy downloading, installing, or using the App, you unconditionally accept these Terms. If you do not agree to these terms, please do not use the App.",
+    "lastUpdated": "Last updated: November 21, 2025",
+    "section1": {
+      "title": "1. DEFINITIONS",
+      "content": "• \"User\" or \"You\": any individual using the App.\n• \"We\", \"Our\", \"Yuzu\": the publisher of the App.\n• \"Content\": all information, text, images, videos, exercises, programs, and other elements available in the App.\n• \"Personal Data\": any information that directly or indirectly identifies a User."
     },
-    "access": {
-      "title": "Access to the Service",
-      "content": "Access to the application requires creating a user account. The user agrees to provide accurate information and to maintain the confidentiality of their credentials."
+    "section2": {
+      "title": "2. PURPOSE OF THE APP",
+      "content": "Personalized exercise programs, progress tracking, recommendations, reminders, favorites and custom sessions. The app is for general wellness and does not replace medical advice."
     },
-    "intellectual": {
-      "title": "Intellectual Property",
-      "content": "All application content (exercises, illustrations, texts, videos) is protected by copyright and belongs to Yuzu Labs. Any unauthorized reproduction is prohibited."
+    "section3": {
+      "title": "3. ACCESS AND USE CONDITIONS",
+      "content": "Minimum age 13; parental consent if under 18. Registration (first name, goals, preferences) and anonymous or permanent account. You agree to provide accurate information, not to use the app for illegal purposes, not to access other users' data, not to copy/modify the app, and to consult a healthcare professional in case of medical conditions."
     },
-    "responsibility": {
-      "title": "Liability",
-      "content": "Yuzu Labs cannot be held responsible for injuries that may occur during exercise practice. Consult a healthcare professional before starting any exercise program."
+    "section4": {
+      "title": "4. HEALTH AND SAFETY WARNINGS",
+      "content": "The app is not a medical device and does not provide medical advice. Prior medical consultation recommended in many cases (heart problems, pain, injuries, pregnancy, etc.). Practice at your own risk; stop immediately in case of pain or discomfort. Limitation of Yuzu's liability for injuries, worsening of conditions, etc."
     },
-    "modification": {
-      "title": "Modification of Terms",
-      "content": "Yuzu Labs reserves the right to modify these Terms at any time. Users will be notified of any significant changes."
+    "section5": {
+      "title": "5. INTELLECTUAL PROPERTY",
+      "content": "All elements of the app belong to Yuzu or its partners. Personal, non-exclusive, non-transferable and revocable license for personal use only."
     },
-    "law": {
-      "title": "Applicable Law",
-      "content": "These Terms are governed by French law. Any dispute shall be submitted to the competent courts of Mulhouse."
+    "section6": {
+      "title": "6. PERSONAL DATA PROTECTION",
+      "content": "Details in the Privacy Policy (data collected: first name, age/gender, goals, history, preferences, technical data). Secure hosting and GDPR compliance."
+    },
+    "section7": {
+      "title": "7. LIMITATION OF LIABILITY",
+      "content": "App provided \"as is\". Exclusion of liability for direct/indirect damages, data loss, interruption, injuries. Maximum amount of damages: 100 euros (except willful misconduct or gross negligence)."
+    },
+    "section8": {
+      "title": "8. DISPUTE RESOLUTION",
+      "content": "French law. Free mediation: AME Conso, 11 Place Dauphine, 75001 Paris — contact@mediationconso-ame.com — https://www.mediationconso-ame.com/ (after prior written approach to Yuzu). French courts have jurisdiction; European ODR platform for EU consumers."
+    },
+    "section9": {
+      "title": "9. CONTACT",
+      "content": "Email: yuzu.contactme@gmail.com"
+    },
+    "section10": {
+      "title": "10. SUBSCRIPTIONS AND PAYMENTS",
+      "content": "Yuzu Gold: monthly and annual subscriptions, automatic renewal via Apple/Google. Billing and receipts via Apple or Google account. Cancellation: Settings > Subscriptions (iOS) or Google Play > Subscriptions (Android); effect at end of current period. Free trial: indicated at subscription; automatic renewal at end of trial unless cancelled. Price changes possible; 30 days notice for increases; may cancel before new pricing. Refunds handled by Apple/Google; Yuzu does not handle refunds directly. Full subscription management via Apple or Google account."
     }
   }
 }

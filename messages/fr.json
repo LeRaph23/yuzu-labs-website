@@ -92,58 +92,96 @@
   },
   "privacy": {
     "title": "Politique de confidentialité",
-    "intro": "Yuzu Labs s'engage à protéger la vie privée des utilisateurs de son application et de son site web. Cette politique de confidentialité explique comment nous collectons, utilisons et protégeons tes données personnelles.",
-    "collection": {
-      "title": "Données collectées",
-      "content": "Nous collectons les données suivantes : informations de compte (email, nom), données d'utilisation de l'application, préférences utilisateur, et données de progression des exercices."
+    "intro": "Bienvenue sur Yuzu !\n\nVotre vie privée est extrêmement importante pour nous. Cette Politique de Confidentialité explique de manière claire et transparente quelles données nous collectons, pourquoi nous les collectons, comment nous les utilisons et quels sont vos droits.\n\nEn utilisant l'Application, vous acceptez les pratiques décrites dans cette Politique de Confidentialité.",
+    "lastUpdated": "Dernière mise à jour : 21 novembre 2025",
+    "section1": {
+      "title": "1. PRINCIPES FONDAMENTAUX",
+      "content": "Nous nous engageons à respecter les principes suivants :\n\n✓ Transparence : Vous informer clairement sur nos pratiques\n✓ Minimisation : Ne collecter que les données strictement nécessaires\n✓ Sécurité : Protéger vos données avec les meilleures pratiques\n✓ Contrôle : Vous donner le contrôle sur vos données\n✓ Conformité : Respecter le RGPD et les lois applicables"
     },
-    "usage": {
-      "title": "Utilisation des données",
-      "content": "Tes données sont utilisées pour : personnaliser ton expérience, améliorer nos services, t'envoyer des notifications relatives à ta progression, et assurer le support client."
+    "section2": {
+      "title": "2. DONNÉES COLLECTÉES",
+      "content": "2.1 Données que Vous Nous Fournissez\n\nDONNÉES DE PROFIL\n• Prénom (obligatoire)\n• Âge (optionnel)\n• Sexe (optionnel)\n\nDONNÉES DE PRÉFÉRENCES ET OBJECTIFS\n• Objectif principal (souplesse, soulagement douleur, posture, mobilité, stress)\n• Zones du corps ciblées (corps entier, nuque, dos, épaules, jambes, pieds)\n• Objectifs spécifiques de souplesse\n• Contexte professionnel (bureau, debout, physique, mixte, flexible)\n• Niveau de condition physique (débutant, intermédiaire, avancé)\n• Moment préféré pour les exercices\n• Heure de rappel (optionnel)\n\nDONNÉES D'ACTIVITÉ\n• Historique des séances (date, durée, type, difficulté)\n• Exercices réalisés avec dates\n• Exercices favoris\n• Séances personnalisées créées\n• Métriques de progression (streaks, total exercices, temps total)\n\n2.2 Données Collectées Automatiquement\n\nDONNÉES TECHNIQUES\n• Identifiant de l'appareil\n• Modèle de l'appareil et version du système\n• Version de l'Application\n• Langue de l'appareil\n• Token de notification push (si activé)\n• Fuseau horaire\n\nDONNÉES D'UTILISATION\n• Dates et heures d'utilisation\n• Fonctionnalités utilisées\n• Erreurs et crashs (données anonymisées)\n\n2.3 Données que Nous Ne Collectons PAS\n\n✗ Nom de famille\n✗ Adresse postale complète\n✗ Numéro de téléphone\n✗ Coordonnées bancaires\n✗ Localisation GPS précise\n✗ Contacts\n✗ Photos ou vidéos personnelles\n✗ Données de santé sensibles (diagnostics médicaux, traitements)\n✗ Données biométriques"
     },
-    "cookies": {
-      "title": "Cookies",
-      "content": "Notre site utilise des cookies essentiels au fonctionnement du service et des cookies analytiques pour améliorer l'expérience utilisateur. Tu peux désactiver les cookies dans les paramètres de ton navigateur."
+    "section3": {
+      "title": "3. UTILISATION DES DONNÉES",
+      "content": "Nous utilisons vos données pour :\n\n• Fournir les services de l'Application (Base légale : Contrat)\n• Personnaliser votre expérience (Base légale : Contrat)\n• Générer des programmes adaptés (Base légale : Contrat)\n• Sauvegarder votre progression (Base légale : Contrat)\n• Synchroniser sur plusieurs appareils (Base légale : Contrat)\n• Envoyer des notifications de rappel (Base légale : Consentement)\n• Améliorer l'Application (Base légale : Intérêt légitime)\n• Assurer la sécurité (Base légale : Intérêt légitime)\n• Support client (Base légale : Intérêt légitime)\n\nVous pouvez retirer votre consentement à tout moment pour les traitements qui en dépendent."
     },
-    "rights": {
-      "title": "Tes droits (RGPD)",
-      "content": "Conformément au RGPD, tu disposes d'un droit d'accès, de rectification, de suppression et de portabilité de tes données. Pour exercer ces droits, contacte-nous à yuzu.contactme@gmail.com."
+    "section4": {
+      "title": "4. DURÉE DE CONSERVATION",
+      "content": "• Données de profil et préférences : Tant que votre compte est actif\n• Historique des séances : Tant que votre compte est actif\n• Exercices favoris : Tant que votre compte est actif\n• Séances personnalisées : Tant que votre compte est actif\n• Données techniques et logs : 12 mois maximum\n• Données de support client : 3 ans après fermeture du ticket\n\nAPRÈS SUPPRESSION DE VOTRE COMPTE :\nToutes vos données personnelles sont supprimées sous 30 jours maximum."
     },
-    "retention": {
-      "title": "Conservation des données",
-      "content": "Tes données sont conservées pendant la durée de ton utilisation du service et jusqu'à 3 ans après ta dernière activité, sauf obligation légale contraire."
+    "section5": {
+      "title": "5. PARTAGE ET TRANSFERT DE DONNÉES",
+      "content": "Nous ne vendons JAMAIS vos données personnelles.\n\nPRESTATAIRES DE SERVICES TECHNIQUES\n\nSupabase (Hébergement et Base de Données)\n• Service : Supabase Inc.\n• Localisation : Serveurs situés dans l'Union Européenne\n• Rôle : Hébergement sécurisé, authentification, synchronisation\n• Protection : Chiffrement TLS et AES-256, conformité SOC 2 Type II\n\nServices de Notifications (Apple/Google)\n• Apple Push Notification Service (APNs) pour iOS\n• Firebase Cloud Messaging (FCM) pour Android\n• Données partagées : Uniquement token de notification et contenu du message\n• Contrôle : Désactivable à tout moment dans les paramètres\n\nHÉBERGEMENT DANS L'UE\nVos données sont hébergées exclusivement dans l'Union Européenne, garantissant le plus haut niveau de protection RGPD."
     },
-    "contact": {
-      "title": "Contact DPO",
-      "content": "Pour toute question relative à la protection de tes données, tu peux contacter notre Délégué à la Protection des Données à l'adresse : yuzu.contactme@gmail.com"
+    "section6": {
+      "title": "6. SÉCURITÉ DES DONNÉES",
+      "content": "6.1 Mesures Techniques\n\n✓ Chiffrement en transit : TLS 1.3 pour toutes les communications\n✓ Chiffrement au repos : AES-256 pour les données stockées\n✓ Authentification sécurisée : Gestion des sessions avec tokens JWT\n✓ Isolation des données : Row Level Security (RLS) - chaque utilisateur ne voit que ses propres données\n✓ Sauvegardes régulières : Backups automatiques quotidiens\n✓ Surveillance : Monitoring 24/7 des systèmes\n\n6.2 Mesures Organisationnelles\n\n✓ Accès restreint aux personnes autorisées uniquement\n✓ Principe du moindre privilège\n✓ Audits réguliers de sécurité\n✓ Formation de l'équipe à la protection des données\n\n6.3 En Cas de Violation de Données\n\nNous nous engageons à :\n• Notifier l'autorité de contrôle (CNIL) sous 72 heures\n• Vous informer sans délai si le risque est élevé\n• Prendre toutes les mesures nécessaires pour limiter l'impact"
+    },
+    "section7": {
+      "title": "7. VOS DROITS SUR VOS DONNÉES (RGPD)",
+      "content": "7.1 Droit d'Accès\nVous pouvez demander une copie de toutes vos données. Comment ? Paramètres > Mes données ou contactez-nous\n\n7.2 Droit de Rectification\nVous pouvez corriger des données inexactes. Comment ? Modifiez directement dans les paramètres\n\n7.3 Droit à l'Effacement\nVous pouvez demander la suppression de vos données. Comment ? Paramètres > Supprimer mes données\n\n7.4 Droit à la Portabilité\nVous pouvez recevoir vos données en format structuré (JSON, CSV). Comment ? Paramètres > Exporter mes données\n\n7.5 Droit d'Opposition\nVous pouvez vous opposer au traitement de vos données. Comment ? Désactivez les options concernées dans les paramètres\n\n7.6 Droit de Retirer Votre Consentement\nPour les notifications, vous pouvez retirer votre consentement à tout moment. Comment ? Désactivez dans Paramètres > Notifications\n\n7.7 Droit de Déposer une Plainte\n\nSi vous estimez que vos droits ne sont pas respectés :\n\nCNIL (Commission Nationale de l'Informatique et des Libertés)\n3 Place de Fontenoy\nTSA 80715\n75334 PARIS CEDEX 07\nTéléphone : 01 53 73 22 22\nSite web : https://www.cnil.fr/\n\nDÉLAI DE RÉPONSE\nNous nous engageons à répondre à vos demandes dans un délai d'un mois maximum."
+    },
+    "section8": {
+      "title": "8. DONNÉES DES MINEURS",
+      "content": "L'Application est accessible aux personnes âgées de 13 ans et plus.\n\nPour les utilisateurs de moins de 18 ans, nous recommandons fortement d'obtenir le consentement parental.\n\nSi nous découvrons qu'un enfant de moins de 13 ans a fourni des données personnelles, nous supprimerons immédiatement ces données."
+    },
+    "section9": {
+      "title": "9. COOKIES ET TECHNOLOGIES SIMILAIRES",
+      "content": "L'Application n'utilise pas de cookies au sens traditionnel.\n\nSTOCKAGE LOCAL\nL'Application stocke certaines données localement sur votre appareil pour :\n• Améliorer les performances\n• Permettre un usage hors ligne\n• Sauvegarder vos préférences\n\nCes données restent sur votre appareil et sont supprimées si vous désinstallez l'Application."
+    },
+    "section10": {
+      "title": "10. MODIFICATIONS DE CETTE POLITIQUE",
+      "content": "Nous pouvons mettre à jour cette Politique de Confidentialité pour refléter des changements dans nos pratiques ou la législation.\n\nEn cas de modification importante :\n• Nous vous notifierons via l'Application\n• Nous mettrons à jour la date en haut de cette politique\n• Votre utilisation continue vaut acceptation des nouvelles conditions"
+    },
+    "section11": {
+      "title": "11. CONTACT",
+      "content": "Pour toute question concernant cette Politique de Confidentialité ou pour exercer vos droits :\n\nEmail : yuzu.contactme@gmail.com\n\nNous nous engageons à répondre à vos demandes dans les meilleurs délais.\n\nENGAGEMENTS DE YUZU\n\nRespecter votre vie privée\nÊtre transparents sur nos pratiques\nVous donner le contrôle sur vos données\nProtéger vos données avec les meilleures mesures de sécurité\nNe jamais vendre vos données à des tiers\nRépondre rapidement à vos demandes\n\nEn utilisant l'Application Yuzu, vous reconnaissez avoir lu, compris et accepté cette Politique de Confidentialité.\n\nVersion 1.0 - Novembre 2025 — Conforme au RGPD (EU 2016/679) et aux exigences de l'Apple App Store"
     }
   },
   "terms": {
     "title": "Conditions Générales d'Utilisation",
-    "intro": "Les présentes conditions générales d'utilisation régissent l'accès et l'utilisation de l'application Yuzu et du site web yuzulabs.app.",
-    "object": {
-      "title": "Objet du service",
-      "content": "Yuzu est une application de bien-être proposant des routines d'étirements personnalisées pour soulager les douleurs liées au travail assis et au télétravail."
+    "intro": "Bienvenue sur Yuzu, une application mobile de mobilité et de stretching personnalisés.\n\nLes présentes Conditions Générales d'Utilisation (« CGU ») régissent l'accès et l'utilisation de l'application mobile Yuzu (« l'Application ») et des services associés (« les Services »).\n\nEn téléchargeant, installant ou utilisant l'Application, vous acceptez sans réserve les présentes CGU. Si vous n'acceptez pas ces conditions, veuillez ne pas utiliser l'Application.",
+    "lastUpdated": "Dernière mise à jour : 21 novembre 2025",
+    "section1": {
+      "title": "1. DÉFINITIONS",
+      "content": "• « Utilisateur » ou « Vous » : toute personne physique utilisant l'Application.\n• « Nous », « Notre », « Yuzu » : l'éditeur de l'Application.\n• « Contenu » : l'ensemble des informations, textes, images, vidéos, exercices, programmes et autres éléments disponibles dans l'Application.\n• « Données Personnelles » : toute information permettant d'identifier directement ou indirectement un Utilisateur."
     },
-    "access": {
-      "title": "Accès au service",
-      "content": "L'accès à l'application nécessite la création d'un compte utilisateur. L'utilisateur s'engage à fournir des informations exactes et à maintenir la confidentialité de ses identifiants."
+    "section2": {
+      "title": "2. OBJET DE L'APPLICATION",
+      "content": "Programmes d'exercices personnalisés, suivi de progression, recommandations, rappels, favoris et séances personnalisées. L'app est à des fins de bien-être général et ne remplace pas un avis médical."
     },
-    "intellectual": {
-      "title": "Propriété intellectuelle",
-      "content": "L'ensemble des contenus de l'application (exercices, illustrations, textes, vidéos) sont protégés par le droit d'auteur et appartiennent à Yuzu Labs. Toute reproduction non autorisée est interdite."
+    "section3": {
+      "title": "3. CONDITIONS D'ACCÈS ET D'UTILISATION",
+      "content": "Âge minimum 13 ans ; autorisation parentale si moins de 18 ans. Inscription (prénom, objectifs, préférences) et compte anonyme ou permanent. Engagement à fournir des informations exactes, à ne pas utiliser l'app à des fins illégales, à ne pas accéder aux données d'autres utilisateurs, à ne pas copier/modifier l'app, et à consulter un professionnel de santé en cas de conditions médicales."
     },
-    "responsibility": {
-      "title": "Responsabilité",
-      "content": "Yuzu Labs ne saurait être tenue responsable des blessures pouvant survenir lors de la pratique des exercices. Consulte un professionnel de santé avant de commencer tout programme d'exercices."
+    "section4": {
+      "title": "4. AVERTISSEMENTS SANTÉ ET SÉCURITÉ",
+      "content": "L'app n'est pas un dispositif médical et ne fournit pas de conseils médicaux. Consultation médicale préalable recommandée dans de nombreux cas (problèmes cardiaques, douleurs, blessures, grossesse, etc.). Pratique à vos propres risques ; arrêt immédiat en cas de douleur ou malaise. Limitation de responsabilité de Yuzu pour blessures, aggravation de conditions, etc."
     },
-    "modification": {
-      "title": "Modification des CGU",
-      "content": "Yuzu Labs se réserve le droit de modifier les présentes CGU à tout moment. Les utilisateurs seront informés de toute modification significative."
+    "section5": {
+      "title": "5. PROPRIÉTÉ INTELLECTUELLE",
+      "content": "Tous les éléments de l'app appartiennent à Yuzu ou à ses partenaires. Licence personnelle, non exclusive, non transférable et révocable pour un usage personnel uniquement."
     },
-    "law": {
-      "title": "Droit applicable",
-      "content": "Les présentes CGU sont soumises au droit français. Tout litige sera soumis aux tribunaux compétents de Mulhouse."
+    "section6": {
+      "title": "6. PROTECTION DES DONNÉES PERSONNELLES",
+      "content": "Détails dans la Politique de Confidentialité (données collectées : prénom, âge/sexe, objectifs, historique, préférences, données techniques). Hébergement sécurisé et conformité RGPD."
+    },
+    "section7": {
+      "title": "7. LIMITATION DE RESPONSABILITÉ",
+      "content": "App fournie « en l'état ». Exclusion de responsabilité pour dommages directs/indirects, perte de données, interruption, blessures. Montant maximum des dommages et intérêts : 100 euros (sauf dol ou faute lourde)."
+    },
+    "section8": {
+      "title": "8. RÉSOLUTION DES LITIGES",
+      "content": "Droit français. Médiation gratuite : AME Conso, 11 Place Dauphine, 75001 Paris — contact@mediationconso-ame.com — https://www.mediationconso-ame.com/ (après démarche écrite préalable auprès de Yuzu). Compétence des tribunaux français ; plateforme européenne ODR pour les consommateurs UE."
+    },
+    "section9": {
+      "title": "9. CONTACT",
+      "content": "Email : yuzu.contactme@gmail.com"
+    },
+    "section10": {
+      "title": "10. ABONNEMENTS ET PAIEMENTS",
+      "content": "Yuzu Gold : abonnements mensuel et annuel, renouvellement automatique via Apple/Google. Facturation et reçus via compte Apple ou Google. Annulation : Réglages > Abonnements (iOS) ou Google Play > Abonnements (Android) ; effet en fin de période en cours. Essai gratuit : indiqué à la souscription ; renouvellement automatique en fin d'essai sauf annulation. Modification des prix possible ; information 30 jours avant pour les augmentations ; possibilité d'annuler avant la nouvelle tarification. Remboursements gérés par Apple/Google ; Yuzu ne gère pas les remboursements directement. Gestion complète de l'abonnement via compte Apple ou Google."
     }
   }
 }
